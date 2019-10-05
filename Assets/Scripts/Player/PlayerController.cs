@@ -14,10 +14,15 @@ public class PlayerController : MonoBehaviour
 	 public Transform groundCheck;
 	 public float checkRadius;
 	 public LayerMask whatIsGround;
+	 
+	 
     
+	
     void Awake()
     {
-        rb2d = GetComponent<Rigidbody2D> ();
+        rb2d = GetComponent<Rigidbody2D>();
+		
+        
     }
 
     
