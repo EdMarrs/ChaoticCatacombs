@@ -4,43 +4,59 @@ using UnityEngine;
 
 public class EnemySideToSide : MonoBehaviour{
     public float speed;
-	public float distanceToMove;
-    private float locationCounter = 0;
+	
+	public float leftMove;
+	public float rightMove;
+   
     private bool isGoingRight=true;
 	private Rigidbody2D rb2d;
+	private float leftWayPoint;
+	private float rightWayPoint;
+	Vector3 localScale;
+	
+	
+	public Vector3 velCopy;
+	
 	void Awake()
     {
-		
         rb2d = GetComponent<Rigidbody2D> ();
+		leftWayPoint=transform.position.x-leftMove;
+		rightWayPoint=rightMove+transform.position.x;
+		
     }
 	
-    void FixedUpdate()
-    {
+   
        
-        CheckFlip();
-        
-    }
-	 void CheckFlip()
+    
+	 void Update()
     {
-		if(isGoingRight==true){
-          Vector2 movement = new Vector2 (1, 0);
-          rb2d.velocity = (movement * speed);
-        }
-        else{
-          Vector2 movement = new Vector2 (-1, 0);
-          rb2d.velocity = (movement * speed);
-        }
+		
+		
         
-        locationCounter++;
-        
-        if(locationCounter >=distanceToMove){
-          if(isGoingRight==true){
+        if(transform.position.x >=rightWayPoint){
             isGoingRight=false;
-          }
-          else{
+			
+		}
+        if (transform.position.x <=leftWayPoint){
+			
             isGoingRight=true;
-          }
-          locationCounter=0;
         }
+		if (isGoingRight==true){
+			moveRight();
+		}
+		if(isGoingRight==false){
+			moveLeft();
+		}
+		
+		velCopy = rb2d.velocity;
+        
+	}
+	void moveRight(){
+
+		rb2d.velocity=new Vector2(speed, 0.0f);
+	}
+	void moveLeft(){
+
+		rb2d.velocity=new Vector2(-speed, 0.0f);
 	}
 }

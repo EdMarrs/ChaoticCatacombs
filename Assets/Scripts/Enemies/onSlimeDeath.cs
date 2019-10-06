@@ -16,8 +16,8 @@ public class onSlimeDeath : MonoBehaviour
 		hp = gameObject.GetComponent<Enemy>().health;
 		if(hp <= 0){
 			Debug.Log("Hit");
-			 Instantiate(miniSlime, transform.position + new Vector3(2, 0, 0), Quaternion.identity);
-			 Instantiate(miniSlime, transform.position + new Vector3(-2, 0, 0), Quaternion.identity);
+			 Instantiate(miniSlime, transform.position + new Vector3(0, 0, 0), Quaternion.identity);
+			 
 			 Destroy(gameObject);
 		}
 	}
