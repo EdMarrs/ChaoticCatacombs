@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerIsHit : MonoBehaviour
 {
@@ -11,9 +12,14 @@ public class PlayerIsHit : MonoBehaviour
 	private float iCounter = 0;
 	public GameObject blood;
 	public GameObject GameOver;
-   
 
-	  private void OnTriggerEnter2D(Collider2D c)
+    public int numberOfHearts;
+
+    public Image[] hearts;
+    public Sprite fullHeart;
+    public Sprite emptyHeart;
+
+    private void OnTriggerEnter2D(Collider2D c)
     {
 		if(!iFrames){
 		if(c.GetComponent<Collider2D>().tag == "enemy")
@@ -33,6 +39,31 @@ public class PlayerIsHit : MonoBehaviour
 	
     void Update()
     {
+        if (health > numberOfHearts)
+        {
+            health = numberOfHearts;
+        }
+       for(int i = 0; i < hearts.Length; i++)
+       {
+            if (i < health)
+            {
+                hearts[i].sprite = fullHeart;
+            }
+            else {
+                hearts[i].sprite = emptyHeart;
+            }
+            if (i < numberOfHearts)
+            {
+                hearts[i].enabled = true;
+            }
+            else
+            {
+                hearts[i].enabled = false;
+            }
+
+       }
+
+
        if(health <=0) {
 		   Instantiate(GameOver,new Vector3(transform.position.x, transform.position.y+10, -1) , Quaternion.identity);
 		   Destroy(player);
