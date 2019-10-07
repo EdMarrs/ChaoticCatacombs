@@ -10,6 +10,7 @@ public class PlayerIsHit : MonoBehaviour
 	private float iTime = 3f;
 	private float iCounter = 0;
 	public GameObject blood;
+	public GameObject GameOver;
    
 
 	  private void OnTriggerEnter2D(Collider2D c)
@@ -33,8 +34,10 @@ public class PlayerIsHit : MonoBehaviour
     void Update()
     {
        if(health <=0) {
+		   Instantiate(GameOver,new Vector2(transform.position.x, transform.position.y+10 ) , Quaternion.identity);
 		   Destroy(player);
-		   Debug.Log("Player Killed");
+		   
+		   
 	   }
 	   if(iFrames==true){
 		   

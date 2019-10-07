@@ -371,6 +371,8 @@ MonoBehaviour:
   health: 3
   player: {fileID: 664523708}
   blood: {fileID: 3279970183438373453, guid: 04938968485166b419147cb6753c46ab, type: 3}
+  GameOver: {fileID: 1772348658534948361, guid: b6b32f46b402c0c4b86e51f6e0ee4b14,
+    type: 3}
 --- !u!212 &22948767
 SpriteRenderer:
   m_ObjectHideFlags: 0

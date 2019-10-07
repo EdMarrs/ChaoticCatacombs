@@ -3,56 +3,27 @@ using UnityEngine;
 
 public class gameOverMovement : MonoBehaviour
 {
-    float speed;
-    float timer;
-    float delay;
-    float appearDelay;
-    bool start;
-
+    public float speed;
+	public float finalCount;
+	public int counter=0;
+	private Rigidbody2D rb2d;
     // Start is called before the first frame update
-    void Start()
-    {
-        start = true;
-        delay = .01755f;
-        appearDelay = 3f;
-        timer = 0f;
-        speed = .005f;
-    }
-
+    void Start(){
+		rb2d = GetComponent<Rigidbody2D> ();
+	}
     // Update is called once per frame
     void Update()
+	
     {
-    	timer += Time.deltaTime;
-    	if (start)
-    	{
-    		if (timer < appearDelay)
-    		{
-    			transform.position = new Vector3(transform.position.x, transform.position.y - speed, 0);
-    		}
-    		else
-    		{
-    			timer = 0f;
-    			start = false;
-    			speed = .15f;
-    		}
-    	}
-    	else
-    	{
-    		if (timer > delay)
-    		{
-    			timer = 0f;
-                if (transform.position.y < .19)
-                {
-                    transform.position = new Vector3(transform.position.x, transform.position.y + speed * Time.deltaTime, 0);
-                }
-                else
-                {
-                    for (int i = 0; i < 5; i++)
-                    {
-                        transform.position = new Vector3(transform.position.x, transform.position.y - speed * delay, 0);
-                    }
-                }
-    		}
-    	}
-    }
+		Debug.Log("Hit");
+    	
+		if (counter < finalCount){
+			
+			rb2d.velocity=new Vector2(0, speed);
+			counter++;
+		}
+		else{
+			rb2d.velocity=new Vector2(0, 0);
+		}
+	}
 }
