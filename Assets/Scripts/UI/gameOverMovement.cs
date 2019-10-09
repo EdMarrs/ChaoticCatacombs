@@ -11,7 +11,8 @@ public class gameOverMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start(){
 		rb2d = GetComponent<Rigidbody2D> ();
-	}
+        //Instantiate(restart, new Vector3(transform.position.x, transform.position.y - 5, -1), Quaternion.identity);
+    }
     // Update is called once per frame
     void Update()
 	
@@ -20,13 +21,13 @@ public class gameOverMovement : MonoBehaviour
     	
 		if (counter < finalCount){
 			
-			rb2d.velocity=new Vector2(0, speed);
+			
 			counter++;
 		}
         
 		else if (counter==finalCount){
             Instantiate(restart, new Vector3(transform.position.x, transform.position.y - 5, -1), Quaternion.identity);
-            rb2d.velocity=new Vector2(0, 0);
+           
             counter++;
         }
 	}

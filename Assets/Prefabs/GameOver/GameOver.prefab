@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -2
-  finalCount: 400
+  finalCount: 100
   counter: 0
   restart: {fileID: 5725203697540539282, guid: cc252d67f6accc44d9c3fef3d7de4187, type: 3}
 --- !u!50 &4793015161518139373
