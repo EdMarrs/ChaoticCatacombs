@@ -12,14 +12,24 @@ public class swordAttackScript : MonoBehaviour
 	public float attackRange;
 	public LayerMask whatIsEnemies;
 	public int damage=1;
-	
+    public AudioClip attackSound;
+    AudioSource audioSource;
+
+
+    void Start()
+    {
+        // need to set audio source to use singular audio clip
+        audioSource = GetComponent<AudioSource>();
+    }
+
     // Start is called before the first frame update
-	void Update(){
+    void Update(){
 	   if(timeBtwnAttack<=0){
 		   
 		   if(Input.GetKey(KeyCode.Z)){
 			   Debug.Log("Attacking...");
-			  Collider2D[] enemiesToDamage=Physics2D.OverlapCircleAll(attackPos.position,attackRange,whatIsEnemies);
+               audioSource.PlayOneShot(attackSound, 1F);
+               Collider2D[] enemiesToDamage=Physics2D.OverlapCircleAll(attackPos.position,attackRange,whatIsEnemies);
 			  for(int i = 0; i<enemiesToDamage.Length;i++)
 			  {
 				  enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
