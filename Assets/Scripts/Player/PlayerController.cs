@@ -14,12 +14,10 @@ public class PlayerController : MonoBehaviour
 	 public Transform groundCheck;
 	 public float checkRadius;
 	 public LayerMask whatIsGround;
-     public AudioClip jumpSound;
-     AudioSource audioSource;
-
-
-
-
+	 
+	 
+    
+	
     void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -27,13 +25,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    void Start()
-    {
-        // need to set audio source to use singular audio clip
-        audioSource = GetComponent<AudioSource>();
-    }
-
-
+    
     void FixedUpdate()
     {
 		//Jump Check
@@ -49,7 +41,7 @@ public class PlayerController : MonoBehaviour
 	void Update(){
 		if(Input.GetKeyDown(KeyCode.UpArrow)){
 			Jump();
-        }
+		}
 		
 		
 			
@@ -71,8 +63,7 @@ public class PlayerController : MonoBehaviour
 		
 		if(isGrounded==true){
 			rb2d.velocity=Vector2.up*jumpForce;
-            audioSource.PlayOneShot(jumpSound, 1F);
-        }
+		}
 		
 	}
 	
