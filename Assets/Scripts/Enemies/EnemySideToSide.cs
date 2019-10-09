@@ -8,7 +8,7 @@ public class EnemySideToSide : MonoBehaviour{
 	public float leftMove;
 	public float rightMove;
    
-    private bool isGoingRight=true;
+    private bool isGoingRight;
 	private Rigidbody2D rb2d;
 	private float leftWayPoint;
 	private float rightWayPoint;
@@ -19,6 +19,15 @@ public class EnemySideToSide : MonoBehaviour{
 	
 	void Awake()
     {
+        int startDir = Random.Range(0, 2);
+        if (startDir == 0)
+        {
+            isGoingRight = true;
+        }
+        else if (startDir == 1)
+        {
+            isGoingRight = false;
+        }
         rb2d = GetComponent<Rigidbody2D> ();
 		leftWayPoint=transform.position.x-leftMove;
 		rightWayPoint=rightMove+transform.position.x;
