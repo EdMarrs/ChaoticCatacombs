@@ -34,10 +34,6 @@ public class AdvAnim : MonoBehaviour
         {
             anim.SetBool("isJumping", false);
         }
-        if (Input.GetKey(KeyCode.Z))
-        {
-            
-            anim.SetTrigger("usingWhip");
-        }
+       
     }
 }

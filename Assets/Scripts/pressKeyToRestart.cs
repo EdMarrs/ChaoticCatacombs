@@ -9,7 +9,7 @@ public class pressKeyToRestart : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
         }
     }
 }

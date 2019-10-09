@@ -19,11 +19,18 @@ public class PlayerIsHit : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
+    public AudioClip hurtSound;
+    AudioSource audioSource;
+
+    
+
     private void OnTriggerEnter2D(Collider2D c)
     {
 		if(!iFrames){
 		if(c.GetComponent<Collider2D>().tag == "enemy")
          {
+                audioSource = GetComponent<AudioSource>();
+                audioSource.PlayOneShot(hurtSound, 1F);
 
            health-=1;
 		   Instantiate(blood, transform.position, Quaternion.identity);
@@ -39,6 +46,7 @@ public class PlayerIsHit : MonoBehaviour
 	
     void Update()
     {
+        
         if (health > numberOfHearts)
         {
             health = numberOfHearts;

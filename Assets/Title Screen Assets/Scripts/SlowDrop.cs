@@ -8,7 +8,7 @@ public class SlowDrop : MonoBehaviour
     Vector3 direction;
     float min;
     float max;
-    float units = 200.0f;
+    float units = 700.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class SlowDrop : MonoBehaviour
     {
         if (direction == Vector3.down)
         {
-            speed = 30f;
+            speed = 90f;
         }
 
         //Use transform.Translate to move the current direction and current speed
