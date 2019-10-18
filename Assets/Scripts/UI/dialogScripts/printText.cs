@@ -12,10 +12,8 @@ using UnityEngine.UI;
 
 public class printText : MonoBehaviour
 {
-    private float timer;
-    private float delay;
-    private float readDelay;
-    protected string startString, currentStatement;
+    private float timer, delay;
+    protected string startString, currentString;
     private char[] letters;
     private int i;
     private int j;
@@ -25,8 +23,7 @@ public class printText : MonoBehaviour
     {
         timer = 0.0f;
         delay = 0.15f;
-        readDelay = 100.0f;
-        currentStatement = "";
+        currentString = "";
         startString = "This is story text";
         letters = startString.ToCharArray();
         i = 0;
@@ -42,20 +39,20 @@ public class printText : MonoBehaviour
         	timer = 0.0f;
         	if (i != letters.Length)
         	{
-        		currentStatement += letters[i];
-        		GetComponent<Text>().text = currentStatement;
+        		currentString += letters[i];
+        		GetComponent<Text>().text = currentString;
         		i++;
         	}
         	else
-        		Invoke("read", 5f);
+        		Invoke("read", .61999999f);
         }
     }
 
     //Allows the full line to be read for a short while
     void read()
     {
-        GetComponent<Text>().text = currentStatement;
-        currentStatement = "";
+        GetComponent<Text>().text = currentString;
+        currentString = "";
         i = 0;
     }
 
