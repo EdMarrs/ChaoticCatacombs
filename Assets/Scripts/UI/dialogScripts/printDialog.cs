@@ -33,12 +33,23 @@ public class printDialog : MonoBehaviour
     		end();
     		return;
     	}
-    	dialogText.text = lines.Dequeue();
-    	 
+    	StopAllCoroutines();
+    	StartCoroutine(type(lines.Dequeue()));
+    }
+
+    IEnumerator type(string sentence)
+    {
+    	dialogText.text = "";
+    	foreach (char letter in sentence.ToCharArray())
+    	{
+    		dialogText.text += letter;
+    		for (int i = 0; i < 5; i++)
+    			yield return null;
+    	}
     }
 
     public void end()
     {
-    	//end dialog here
+    	//Shift to next scene
     }
 }

@@ -259,7 +259,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: ba458c1184541476091009c1abe64a66, type: 3}
     m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
@@ -337,6 +337,23 @@ MonoBehaviour:
     - Adventure?
     - What truly defines an adventure?
     - Is it the journey...the destination...?
+    - The call to adventure always draws attention.
+    - The suspense...the excitement...
+    - All the stories are...unpredictable
+    - or so we think...
+    - An adventure that is both wholesome and rewarding.
+    - Is THAT what you are looking for?
+    - Then, come step into the bar...
+    - See those mysterious characters over there?
+    - They are adventurers...
+    - or so they say.
+    - Go listen to what they have to say.
+    - '...'
+    - Oh wait no!
+    - Do not make eye contact with that man.
+    - He is the most mysterious one of them all.
+    - Hear their tales, and judge for yourself
+    - what an adventure is to YOU!
 --- !u!114 &1015815950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -702,7 +719,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3e4b13a127139e94887a301670b8c8c3, type: 3}
+    m_Font: {fileID: 12800000, guid: ba458c1184541476091009c1abe64a66, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
