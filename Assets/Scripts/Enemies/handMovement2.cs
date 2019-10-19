@@ -1,9 +1,9 @@
 using UnityEngine;
 using System.Collections;
 
-public class HandMovement : MonoBehaviour {
+public class HandMovement2 : MonoBehaviour {
 
-public gameObject Hand;
+public gameObject Hand2;
 
 public boolean isHit;
 
@@ -71,12 +71,12 @@ var handHealth = getComponent<handBoss>(HP) //might have to check HP each time v
         if (Vert){
             if (!max)
             {
-                transform.position.y += step;
+                transform.position.y -= step; //direction is flipped for opposite hand
             }
      
             else
             {
-                transform.position.y -= step;
+                transform.position.y += step; //""
             }
         }
  
@@ -84,12 +84,12 @@ var handHealth = getComponent<handBoss>(HP) //might have to check HP each time v
         {
             if (!max)
             {
-                transform.position.x += step;
+                transform.position.x -= step; //""
             }
      
             else
             {
-                transform.position.x -= step;
+                transform.position.x += step; //""
             }
         }
     }
@@ -107,7 +107,7 @@ var handHealth = getComponent<handBoss>(HP) //might have to check HP each time v
             var offset = new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * Radius;
 
             float centerPoint = offset.transform.position.y;
-            float altitude = Hand.transform.position.y;
+            float altitude = Hand2.transform.position.y;
 
             transform.position = _centre + offset;
 
@@ -129,7 +129,7 @@ var handHealth = getComponent<handBoss>(HP) //might have to check HP each time v
 
         function clapCheck() { //Definitley gotta fix
             if(timeLeft < 0){ 
-                returnPoint = Vector2(transform.position.x, transform.position.y);
+                returnPoint = Vector2(transform.position.x, transform.position.y); //shouldn't have to fix direction bc it follows x pos of player
 
                 for(int x=0; x<3; x++){
                     if(x==1){
@@ -153,9 +153,10 @@ var handHealth = getComponent<handBoss>(HP) //might have to check HP each time v
         //placeHolder++;
         //reset until placeHolder == 9; 
     }
+
     public Update(){
 
-        if(getComponent<handBoss>("health") -=) {
+        if(//hand2 is hit){
             for(int i = 0; i < 2; i++){
                 if(i = 0){
                     isHit = true;
@@ -167,8 +168,8 @@ var handHealth = getComponent<handBoss>(HP) //might have to check HP each time v
             }
         }
 
-        if(getComponent<Hand2>(isHit) = true){ //checks if other hand was hit so their health is matching...
-            health -=;                          //...making sure AI stays in line
+        if(getComponent<Hand>(isHit) = true){
+            health -=;
         }
     }
 }
