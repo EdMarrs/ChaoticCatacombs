@@ -3,7 +3,7 @@ using System.Collections;
 
 public class HandMovement2 : MonoBehaviour {
 
-public gameObject Hand2;
+/*public gameObject Hand2;
 
 public boolean isHit;
 
@@ -171,5 +171,5 @@ var handHealth = getComponent<handBoss>(HP) //might have to check HP each time v
         if(getComponent<Hand>(isHit) = true){
             health -=;
         }
-    }
+    }*/
 }

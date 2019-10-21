@@ -3,7 +3,7 @@ using System.Collections;
 
 public class HandMovement : MonoBehaviour {
 
-public gameObject Hand;
+/*public gameObject Hand;
 
 public boolean isHit;
 
@@ -170,5 +170,5 @@ var handHealth = getComponent<handBoss>(HP) //might have to check HP each time v
         if(getComponent<Hand2>(isHit) = true){ //checks if other hand was hit so their health is matching...
             health -=;                          //...making sure AI stays in line
         }
-    }
+    }*/
 }
