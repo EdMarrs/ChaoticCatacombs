@@ -8,8 +8,10 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
-  missingFiles: []
-  errors: []
+  missingFiles:
+  - Assets/LevelMaps/Users/liamo/Unity_Programs/Map Prototype/Assets/simpleGraphics_tiles16x16.png
+  errors:
+  - 'Missing texture asset: Users/liamo/Unity_Programs/Map Prototype/Assets/simpleGraphics_tiles16x16.png'
   warnings: []
   missingSortingLayers: []
   missingLayers: []
@@ -17,7 +19,7 @@ ScriptedImporter:
   importerVersion: 10
   pixelsPerUnit: 100
   edgesPerEllipse: 32
-  numberOfObjectsImported: 83
+  numberOfObjectsImported: 2
   useSpriteAtlas: 1
   atlasWidth: 2048
   atlasHeight: 2048
