@@ -19,8 +19,8 @@ public class Boss1Phase3 : MonoBehaviour
     public Vector3 rotPos = new Vector3(0, 0, 0);
     public Vector3 origRotPos = new Vector3(0, 0, 0);
     public Transform currentPos;
-    
 
+    public int hp;
     public float speed;
     
     private bool first = false;
@@ -47,7 +47,13 @@ public class Boss1Phase3 : MonoBehaviour
 
     void Update()
     {
-       // currentPos = transform.position;
+        // currentPos = transform.position;
+
+        hp = gameObject.GetComponent<Enemy>().health;
+        if (hp <= 0)
+        {
+            Destroy(gameObject);
+        }
 
         if (first == false)
         {
