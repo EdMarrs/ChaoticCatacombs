@@ -55,18 +55,18 @@ public class PlayerIsHit : MonoBehaviour
        {
             if (i < health)
             {
-             //   hearts[i].sprite = fullHeart;
+                hearts[i].sprite = fullHeart;
             }
             else {
-           //     hearts[i].sprite = emptyHeart;
+                hearts[i].sprite = emptyHeart;
             }
             if (i < numberOfHearts)
             {
-            //    hearts[i].enabled = true;
+               hearts[i].enabled = true;
             }
             else
             {
-           //     hearts[i].enabled = false;
+               hearts[i].enabled = false;
             }
 
        }
