@@ -64,7 +64,8 @@ private Vector3 currentPos;
     private bool thirteenth = false;
 
     public float smooth = 2f;
-    private Quaternion targetRotation;
+    private Quaternion targetRotationL;
+    private Quaternion targetRotationR;
     private Quaternion resetRotation;
 
 
@@ -76,8 +77,10 @@ private Vector3 currentPos;
          * 
          */
 
-        targetRotation = transform.rotation;
-        targetRotation *= Quaternion.AngleAxis(-90, Vector3.back);
+        targetRotationL = transform.rotation;
+        targetRotationL *= Quaternion.AngleAxis(90, Vector3.back);
+        targetRotationR = transform.rotation;
+        targetRotationR *= Quaternion.AngleAxis(-90, Vector3.back);
         resetRotation = transform.rotation;
         resetRotation *= Quaternion.AngleAxis(0, Vector3.back);
 
@@ -369,7 +372,17 @@ private Vector3 currentPos;
     {
         //  transform.Rotate(rotPos);
         // rotationTest = true;
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 10 * smooth * Time.deltaTime);
+
+        if (whatHand == true)
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotationL, 10 * smooth * Time.deltaTime);
+        }
+
+        if (whatHand == false)
+        {
+
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotationR, 10 * smooth * Time.deltaTime);
+        }
     }
     // 12th
     void ResetRotateHand()
