@@ -13,7 +13,7 @@ public class ToBossRoom1 : MonoBehaviour
         {
             GameObject.Find("Player").GetComponent<PlayerState>().SavePlayer();
             
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
     }
 }

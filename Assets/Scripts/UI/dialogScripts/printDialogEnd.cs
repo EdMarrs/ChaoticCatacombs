@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class printDialog : MonoBehaviour
+public class printDialogEnd : MonoBehaviour
 {
     private Queue<string> lines;
     public Text dialogText;
@@ -50,6 +50,6 @@ public class printDialog : MonoBehaviour
 
     public void end()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 }

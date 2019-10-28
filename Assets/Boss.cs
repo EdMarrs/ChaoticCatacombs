@@ -6,7 +6,7 @@ public class Boss : MonoBehaviour
 {
     public Vector3 pos1 = new Vector3(0, 2, 2);
     public Vector3 pos2 = new Vector3(0, 2, 0);
-    public int health = 3;
+    private int health;
  //   public GameObject blood;
     private Rigidbody2D rb;
     //   public float thrust;
@@ -73,6 +73,7 @@ public class Boss : MonoBehaviour
         if (health <= 0)
         {
             Instantiate(winner);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(4);
             Destroy(gameObject);
         }
 
