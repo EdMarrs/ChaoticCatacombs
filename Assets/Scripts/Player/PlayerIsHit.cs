@@ -73,7 +73,7 @@ public class PlayerIsHit : MonoBehaviour
 
 
        if(health <=0) {
-		   Instantiate(GameOver,new Vector3(transform.position.x, transform.position.y+4, -1) , Quaternion.identity);
+		   Instantiate(GameOver,new Vector3(Camera.main.gameObject.transform.position.x, Camera.main.gameObject.transform.position.y+2, -1) , Quaternion.identity);
 		   Destroy(player);
 		   
 		   
