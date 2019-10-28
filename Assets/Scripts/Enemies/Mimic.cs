@@ -1,28 +1,28 @@
-Using Unity Engine;
-Using System.Collections;
+using UnityEngine;
+using System.Collections;
 
-public class Mimic : Monobehaviour { //50% chance treasure chest is a Mimic and will attack you
-    public gameObject chest;
-    public gameObject player;
+public class Mimic : MonoBehaviour { //50% chance treasure chest is a Mimic and will attack you
+    /*public GameObject chest;
+    public GameObject player;
 
-    public gameObject speedBoost = getComponent<PowerUps>(speedBuff);
-    public gameObject damageBoost = getComponent<PowerUps>(damageBuff); 
-    public gameObject shieldBoost = getComponent<PowerUps>(shieldBuff);
+    public GameObject speedBoost = GetComponent<PowerUps>(speedBuff);
+    public GameObject damageBoost = GetComponent<PowerUps>(damageBuff); 
+    public GameObject shieldBoost = GetComponent<PowerUps>(shieldBuff);
 
-    public gameObject[] gold = new gameObject[math.random(5, 25)];
+    public GameObject[] gold = new GameObject[math.random(5, 25)];
     var goldDrop = gold[0];
 
-    public gameObject[] powerUpList = new gameObject[speedBoost, damageBoost, shieldBoost];
-    public gameObject[] loot = new gameObject[powerUpList, gold];
+    public GameObject[] powerUpList = new GameObject[speedBoost, damageBoost, shieldBoost];
+    public GameObject[] loot = new GameObject[powerUpList, gold];
 
     function isMimic(){
-        if(/*player collision with chest*/) {
-            var mimicTest = math.random(1,3);
+        if(// player collision with chest) {
+            var mimicTest = Math.random(1,3);
             if(mimicTest == 1){
                 bite();
             }
             else(){
-                Instantiate(loot[math.random(1,3)]);
+                Instantiate(loot[Math.random(1,3)]);
             }
         }
 
@@ -31,5 +31,5 @@ public class Mimic : Monobehaviour { //50% chance treasure chest is a Mimic and 
             //deal damage to player
             //drop no loot
         }
-    }
+    }*/
 }

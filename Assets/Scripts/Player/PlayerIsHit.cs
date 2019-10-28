@@ -62,11 +62,11 @@ public class PlayerIsHit : MonoBehaviour
             }
             if (i < numberOfHearts)
             {
-                hearts[i].enabled = true;
+               hearts[i].enabled = true;
             }
             else
             {
-                hearts[i].enabled = false;
+               hearts[i].enabled = false;
             }
 
        }
