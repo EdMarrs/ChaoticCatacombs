@@ -12,7 +12,6 @@ public class Boss1Phase2 : MonoBehaviour
 
     
     public Vector3 origRotPos = new Vector3(0, 0, 0);
-    public Transform currentPos;
 
     public Vector3 rotatePoint = new Vector3(0, 0, 0);
     public Vector3 axis = new Vector3(0, 0, 1);
@@ -26,14 +25,21 @@ public class Boss1Phase2 : MonoBehaviour
     public int hp;
     public float speed;
 
+    public bool whatHand;
+    public static bool lHandDead;
+    public static bool rHandDead;
+
     private bool first = false;
     private bool second = false;
     private bool third = false;
-    private bool rotationTest = false;
     private bool fourth = false;
     private bool fifth = false;
+    private bool sixth = false;
+    private bool seventh = false;
 
-
+    public float smooth = 2f;
+    private Quaternion targetRotationL;
+    private Quaternion targetRotationR;
 
 
 
@@ -41,10 +47,15 @@ public class Boss1Phase2 : MonoBehaviour
     {
         /* Once player completes phase 2
          * hand health reference will be reset in the Hand Manager
-         * 
+         * will just create new hands instead
          * 
          */
-        
+
+        targetRotationL = transform.rotation;
+        targetRotationL *= Quaternion.AngleAxis(0, Vector3.back);
+        targetRotationR = transform.rotation;
+        targetRotationR *= Quaternion.AngleAxis(0, Vector3.back);
+
     }
 
     void Update()
@@ -52,140 +63,217 @@ public class Boss1Phase2 : MonoBehaviour
         // currentPos = transform.position;
 
         hp = gameObject.GetComponent<Enemy>().health;
-        if (hp <= 0)
+        if (whatHand == true)
         {
-            Destroy(gameObject);
+            if (hp <= 0)
+            {
+                lHandDead = true;
+                Destroy(gameObject);
+            }
+        }
+        if (whatHand == false)
+        {
+            if (hp <= 0)
+            {
+                rHandDead = true;
+                Destroy(gameObject);
+            }
         }
 
+        // rotate
         if (first == false)
         {
             StartCoroutine(A());
+            fourth = false;
+            fifth = false;
+            sixth = false;
+            seventh = false;
 
-            transform.RotateAround(rotatePoint, axis, Time.deltaTime * 400);
-            //first = true;
+            transform.RotateAround(rotatePoint, axis, Time.deltaTime * 300);
+           
+           
         }
-        
-        
+
+        // reset rotation
         if (second == false && first == true)
         {
+            StopCoroutine(A());
             StartCoroutine(B());
-            //transform.position += new Vector3(oneX * Time.deltaTime, oneY * Time.deltaTime, 0);
-            MoveHandsUp();
-            ChangeRotPosUp();
+
+            ResetPosition();
+
+
+           
             //transform.RotateAround(rotatePoint, axis, Time.deltaTime * 200);
         }
-        
-        
+
+        // move up
         if (third == false && second == true)
         {
+            StopCoroutine(B());
             StartCoroutine(C());
-            transform.RotateAround(rotatePoint, axis, Time.deltaTime * 400);
+            MoveHandsUp();
+            ChangeRotPosUp();
+
+            
         }
 
-        
+        // rotate
         if (fourth == false && third == true)
         {
+            StopCoroutine(C());
             StartCoroutine(D());
-            MoveHandsDown();
-            ChangeRotPosDown();
+            transform.RotateAround(rotatePoint, axis, Time.deltaTime * 300);
+
+            
             //transform.RotateAround(rotatePoint, axis, Time.deltaTime * 200);
         }
 
-        if (fourth == true)
+        // reset rotation
+        if (fifth == false && fourth == true)
         {
-            ResetRotateHand();
+            StopCoroutine(D());
+            StartCoroutine(E());
+                ResetPosition();
 
         }
+
+        // move down
+        if (sixth == false && fifth == true)
+        {
+            StopCoroutine(E());
+            StartCoroutine(F());
+            MoveHandsDown();
+            ChangeRotPosDown();
+        }
+
+        // reset hands positions
+        if(seventh == false && sixth == true)
+        {
+            
+            StopCoroutine(F());
+            StartCoroutine(G());
+
+            // right hand
+            if (axis.z == -1)
+            {
+           
+                  transform.position = new Vector3(7, -1, 0);
+            }
+            // left hand
+            else if (axis.z == 1)
+            {
+               
+                   transform.position = new Vector3(-7, -1, 0);
+            }
+           
+        }
         
+        // reset booleans to loop
+        if (seventh == true)
+        {
+            StopCoroutine(G());
+            ResetBools();
+        }
+       
 
-        /*
-        print("test: " + test);
-        print("first: " + first);
-        print("third: " + third);
-        print("fourth: " + fourth);
-        print("rotationTest: " + rotationTest);
-
-        */
     }
 
-
-    // These are a bit Unreliable, they don't always start at the same time, causing issues... 
-
+    // rotate
     IEnumerator A()
     {
-
-        yield return new WaitForSeconds(5f);
+        Debug.Log("A");
+        yield return new WaitForSeconds(6f);
         first = true;
 
     }
     
-
+    // reset rotation
     IEnumerator B()
     {
-
+        Debug.Log("B");
         yield return new WaitForSeconds(1f);
         second = true;
 
     }
-    
+    // move up
     IEnumerator C()
     {
-
-        yield return new WaitForSeconds(5f);
+        Debug.Log("C");
+        yield return new WaitForSeconds(2f);
         third = true;
 
     }
-    
+    // rotate
     IEnumerator D()
     {
-        // keep around 10f
-        yield return new WaitForSeconds(1f);
+        Debug.Log("D");
+        yield return new WaitForSeconds(6f);
         fourth = true;
 
     }
-
-    void ResetRotateHand()
+     // reset rotation
+    IEnumerator E()
     {
-        ResetBools();
+        Debug.Log("E");
+        yield return new WaitForSeconds(1f);
+        fifth = true;
 
     }
+        // move down 
+        IEnumerator F()
+    {
+        Debug.Log("F");
+        yield return new WaitForSeconds(2f);
+        sixth = true;
+      //  seventh = true;
+
+    }
+
+    IEnumerator G()
+    {
+        Debug.Log("G");
+        yield return new WaitForSeconds(2f);
+        seventh = true;
+
+    }
+
+
 
 
     // differentiates left and and right hand by rotation direction
     // (left hand rotates left (-1) & right hand rotates right (+1))
     void MoveHandsUp()
     {
+        // right hand
         if (axis.z == -1)
         {
-            transform.position = new Vector3(2, 1, 0);
-            //oneX = -1;
-            //oneY = 1;
-            //transform.position += new Vector3(oneX * Time.deltaTime * 2, oneY * Time.deltaTime * 2, 0);
+            transform.position += new Vector3(-2 * Time.deltaTime, 1 * Time.deltaTime, 0);
+
         }
+        // left hand
         else if (axis.z == 1)
         {
-            transform.position = new Vector3(-2, 1, 0);
-            //oneX = 1;
-            //oneY = 1;
-            //transform.position += new Vector3(oneX * Time.deltaTime * 2, oneY * Time.deltaTime * 2, 0);
+            transform.position += new Vector3(2 * Time.deltaTime, 1 * Time.deltaTime, 0);
+
         }
     }
 
     void MoveHandsDown()
     {
+        // right hand
         if (axis.z == -1)
         {
-            transform.position = new Vector3(7, 0, 0);
-            //oneX = 1;
-            //oneY = -1;
-            //transform.position += new Vector3(oneX * Time.deltaTime * 2, oneY * Time.deltaTime * 2, 0);
+            transform.position += new Vector3(2 * Time.deltaTime, -1 * Time.deltaTime, 0);
+            //transform.position = new Vector3(7, -1, 0);
+
         }
+        // left hand
         else if (axis.z == 1)
         {
-            transform.position = new Vector3(-7, 0, 0);
-            //oneX = -1;
-            //oneY = -1;
-           // transform.position += new Vector3(oneX * Time.deltaTime * 2, oneY * Time.deltaTime * 2, 0);
+            transform.position += new Vector3(-2 * Time.deltaTime, -1 * Time.deltaTime, 0);
+            //transform.position = new Vector3(-7, -1, 0);
+
         }
     }
 
@@ -193,11 +281,11 @@ public class Boss1Phase2 : MonoBehaviour
     {
         if (axis.z == -1)
         {
-            rotatePoint = new Vector3(2, 0, 0);
+            rotatePoint = new Vector3(4, 1, 0);
         }
         else if (axis.z == 1)
         {
-            rotatePoint = new Vector3(-2, 0, 0);
+            rotatePoint = new Vector3(-4, 1, 0);
         }
     }
 
@@ -205,29 +293,43 @@ public class Boss1Phase2 : MonoBehaviour
     {
         if (axis.z == -1)
         {
-            rotatePoint = new Vector3(8, -2, 0);
+            rotatePoint = new Vector3(7, -2, 0);
         }
         else if (axis.z == 1)
         {
-            rotatePoint = new Vector3(-8, -2, 0);
+            rotatePoint = new Vector3(-7, -2, 0);
         }
     }
 
     void ResetBools()
     {
-        first = false;
+       
         second = false;
         third = false;
-        //rotationTest = false;
         fourth = false;
-        //fifth = false;
+        fifth = false;
+        sixth = false;
+        seventh = false;
+        first = false;
+
+
     }
 
-    /*
-    void StopDoingThings()
+    void ResetPosition()
     {
-
-        return;
+        // right hand
+        if (axis.z == -1)
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotationR, 10 * smooth * Time.deltaTime);
+            //  transform.position = new Vector3(-7, -1, 0);
+        }
+        // left hand
+        else if (axis.z == 1)
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotationR, 10 * smooth * Time.deltaTime);
+            //   transform.position = new Vector3(7, -1, 0);
+        }
     }
-    */
+
+
 }

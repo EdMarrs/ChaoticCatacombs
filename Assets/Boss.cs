@@ -7,14 +7,17 @@ public class Boss : MonoBehaviour
     public Vector3 pos1 = new Vector3(0, 2, 2);
     public Vector3 pos2 = new Vector3(0, 2, 0);
     public int health = 3;
+ //   public GameObject blood;
     private Rigidbody2D rb;
+    //   public float thrust;
+
     private bool first = false;
     private bool second = false;
     private bool third = false;
     private bool fourth = false;
     public GameObject winner;
 
-
+    // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -25,7 +28,7 @@ public class Boss : MonoBehaviour
         // Move from the background into where the player can hit them
         if (Boss1Phase3.lHandDead && Boss1Phase3.rHandDead == true)
         {
-       //     transform.position = Vector3.Lerp(pos2, pos1, Time.deltaTime);
+            //   transform.position = Vector3.Lerp(pos2, pos1, Time.deltaTime);
 
             if (first == false)
             {
@@ -59,6 +62,7 @@ public class Boss : MonoBehaviour
                 ResetBools();
             }
 
+
         }
 
 
@@ -78,7 +82,7 @@ public class Boss : MonoBehaviour
     {
         Debug.Log("A");
         yield return new WaitForSeconds(1f);
-     //   transform.position = Vector3.Lerp(pos2, pos1, Time.deltaTime);
+        //   transform.position = Vector3.Lerp(pos2, pos1, Time.deltaTime);
         gameObject.layer = 10;
         first = true;
 
@@ -108,10 +112,11 @@ public class Boss : MonoBehaviour
 
     }
 
-    // 1st
+
+
     void BackNForthA()
     {
-    
+
         transform.position += new Vector3(0, -1 * Time.deltaTime, -1 * Time.deltaTime);
 
     }
@@ -137,13 +142,14 @@ public class Boss : MonoBehaviour
 
     void ResetBools()
     {
-     //   first = false;
-     //   second = false;
+        //   first = false;
+        //   second = false;
         third = false;
         fourth = false;
     }
 
-        public void TakeDamage(int damage)
+
+    public void TakeDamage(int damage)
     {
      //   Instantiate(blood, transform.position, Quaternion.identity);
         health -= damage;

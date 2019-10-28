@@ -10,17 +10,7 @@ public class Boss1Phase3 : MonoBehaviour
      * After that movement the hands will move in a third motion
      */
 
-    /*
-public Vector3 pos1 = new Vector3(0, 0, 0);
-public Vector3 pos2 = new Vector3(0, 0, 0);
-public Vector3 newPos1 = new Vector3(0, 0, 0);
-public Vector3 newPos2 = new Vector3(0, 0, 0);
-public Vector3 clapPos1 = new Vector3(0, 0, 0);
-public Vector3 clapPos2 = new Vector3(0, 0, 0);
-public Vector3 rotPos = new Vector3(0, 0, 0);
-public Vector3 origRotPos = new Vector3(0, 0, 0);
-private Vector3 currentPos;
-*/
+
     public float oneX;
     public float oneY;
 
@@ -132,21 +122,28 @@ private Vector3 currentPos;
         {
             StopCoroutine(B());
             StartCoroutine(C());
-            BackNForthC(); 
+            BackNForthC();
+            // MoveToClap();
         }
 
         if (fourth == false && third == true)
         {
             StopCoroutine(C());
             StartCoroutine(D());
-            BackNForthD();  
+            BackNForthD();
+            //   ClapHands();
+
         }
 
         if (fifth == false && fourth == true)
         {
             StopCoroutine(D());
             StartCoroutine(E());
-            RotateHand();
+
+      
+                RotateHand();
+           
+           
         }
 
         if (sixth == false && fifth == true)
@@ -215,9 +212,8 @@ private Vector3 currentPos;
     }
 
 
-    // These are now reliable!
-    // These function as delays counitng down
-    // After the set amonunt of seconds the hands should change direction based on the called function
+   
+    // timers that act as delays for running functions
 
     IEnumerator A()
     {
@@ -329,6 +325,7 @@ private Vector3 currentPos;
     {
         //   transform.position = Vector3.Lerp(pos1, pos2, Mathf.PingPong(Time.time * speed, 1.0f));
         transform.position += new Vector3(oneX * Time.deltaTime, oneY * Time.deltaTime, 0);
+
     }
     // 2nd
     void BackNForthB()
@@ -351,8 +348,6 @@ private Vector3 currentPos;
     // 5th
     void RotateHand()
     {
-        //  transform.Rotate(rotPos);
-        // rotationTest = true;
 
         if (whatHand == true)
         {
