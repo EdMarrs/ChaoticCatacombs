@@ -23,7 +23,7 @@ public class advSpecial : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Space))
             {
-                if (SpecialBarCurr == 100)
+                if (SpecialBarCurr >= 100)
                 {
                     SpecialBarCurr -=100;
                     //activate special

@@ -20,6 +20,8 @@ public class SpecialBar : MonoBehaviour
 
         SpecialBarCurr = GameObject.Find("Player").GetComponent<advSpecial>().SpecialBarCurr;
         
-        bar.localScale = new Vector3((SpecialBarCurr / 100f), 1f);
+        bar.localScale = new Vector3((SpecialBarCurr / GameObject.Find("Player").GetComponent<advSpecial>().SpecialBarMax), 1f);
+
+       
     }
 }
