@@ -23,14 +23,16 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
-		
-        
+
+       // DontDestroyOnLoad(this.gameObject);
     }
 
     void Start()
     {
         // need to set audio source to use singular audio clip
         audioSource = GetComponent<AudioSource>();
+
+        
     }
 
 
