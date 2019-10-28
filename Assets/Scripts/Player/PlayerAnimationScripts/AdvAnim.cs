@@ -34,6 +34,8 @@ public class AdvAnim : MonoBehaviour
         {
             anim.SetBool("isJumping", false);
         }
-       
+
+        
+
     }
 }
