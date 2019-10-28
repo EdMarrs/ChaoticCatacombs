@@ -22,11 +22,15 @@ public class PlayerIsHit : MonoBehaviour
     public AudioClip hurtSound;
     AudioSource audioSource;
 
+    GameObject test;
+
+
     
 
     private void OnTriggerEnter2D(Collider2D c)
     {
-		if(!iFrames){
+        
+        if (!iFrames){
 		if(c.GetComponent<Collider2D>().tag == "enemy")
          {
                 audioSource = GetComponent<AudioSource>();

@@ -9,6 +9,15 @@ public class pressKeyToRestart : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
+
+            GlobalControl.Instance.hp = 3;
+            GlobalControl.Instance.maxhp = 3;
+            GlobalControl.Instance.speed = 5;
+            GlobalControl.Instance.jumpforce = 30;
+            GlobalControl.Instance.damage = 1;
+            GlobalControl.Instance.specialBarCurr = 100;
+            GlobalControl.Instance.specialBarMax = 100;
+
             UnityEngine.SceneManagement.SceneManager.LoadScene(1);
         }
     }
