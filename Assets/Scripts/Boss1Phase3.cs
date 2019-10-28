@@ -126,45 +126,27 @@ private Vector3 currentPos;
             StopCoroutine(A());
             StartCoroutine(B());
             BackNForthB();
-
-            /*
-            if (rotationTest == false)
-            {
-                RotateHand();
-            }
-            
-            StopCoroutine(A());
-            StartCoroutine(B());
-            */
-
         }
 
-        if ( third == false && first == true)
+        if ( third == false && second == true)
         {
             StopCoroutine(B());
             StartCoroutine(C());
-            BackNForthC();
-            // MoveToClap();
+            BackNForthC(); 
         }
 
         if (fourth == false && third == true)
         {
             StopCoroutine(C());
             StartCoroutine(D());
-            BackNForthD();
-            //   ClapHands();
-
+            BackNForthD();  
         }
 
         if (fifth == false && fourth == true)
         {
             StopCoroutine(D());
             StartCoroutine(E());
-
-      
-                RotateHand();
-           
-           
+            RotateHand();
         }
 
         if (sixth == false && fifth == true)
@@ -233,7 +215,9 @@ private Vector3 currentPos;
     }
 
 
-    // These are a bit Unreliable, they don't always start at the same time, causing issues... 
+    // These are now reliable!
+    // These function as delays counitng down
+    // After the set amonunt of seconds the hands should change direction based on the called function
 
     IEnumerator A()
     {
@@ -345,9 +329,6 @@ private Vector3 currentPos;
     {
         //   transform.position = Vector3.Lerp(pos1, pos2, Mathf.PingPong(Time.time * speed, 1.0f));
         transform.position += new Vector3(oneX * Time.deltaTime, oneY * Time.deltaTime, 0);
-       // twelfth = false;
-       // thirteenth = false;
-        // will need to be last 1 or 2 booleans set to false
     }
     // 2nd
     void BackNForthB()
