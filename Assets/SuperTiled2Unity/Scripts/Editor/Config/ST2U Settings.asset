@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff72ddc2da234e244a8e96eb44e4c03d, type: 3}
+  m_Script: {fileID: 0}
   m_Name: ST2U Settings
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp-Editor:SuperTiled2Unity.Editor:ST2USettings
   m_PixelsPerUnit: 100
   m_EdgesPerEllipse: 32
   m_AnimationFramerate: 20

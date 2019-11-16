@@ -28,7 +28,8 @@ public class printDialog : MonoBehaviour
 
     public void DisplayNextLine()
     {
-    	if (lines.Count == 0)
+    	FindObjectOfType<blinkButton>().hide();
+        if (lines.Count == 0)
     	{
     		end();
     		return;
@@ -39,17 +40,40 @@ public class printDialog : MonoBehaviour
 
     IEnumerator type(string sentence)
     {
-    	dialogText.text = "";
+        if(lines.Count == 9)
+        {
+            FindObjectOfType<changeAesth>().swap();
+        }
+
+        else if(lines.Count == 5)
+        {
+            FindObjectOfType<changeAesth>().swap();
+        }
+
+        else if (lines.Count == 1)
+        {
+            FindObjectOfType<changeAesth>().swap();
+        }
+
+        dialogText.text = "";
     	foreach (char letter in sentence.ToCharArray())
     	{
     		dialogText.text += letter;
     		for (int i = 0; i < 5; i++)
     			yield return null;
     	}
+        if (lines.Count == 10)
+        {
+            FindObjectOfType<changeAesth>().swap();
+            for (int i = 0; i < 60; i++)
+                yield return null;
+            FindObjectOfType<changeAesth>().swap();
+        }
+        StartCoroutine(FindObjectOfType<blinkButton>().blink());
     }
 
     public void end()
     {
-    	//Shift to next scene
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
 }

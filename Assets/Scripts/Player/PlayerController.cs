@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
-{	 public float speed;
-     private Rigidbody2D rb2d;
-	 
-	 
-	 private bool facingRight = true;
+{	 
+    public float speed;
+    private Rigidbody2D rb2d;
+    private Animator anim;
 	 
 	 public float jumpForce=20;
 	 public bool isGrounded;
@@ -16,21 +15,22 @@ public class PlayerController : MonoBehaviour
 	 public LayerMask whatIsGround;
      public AudioClip jumpSound;
      AudioSource audioSource;
-
-
-
+    internal static int moveInput;
 
     void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
-		
-        
+
+       // DontDestroyOnLoad(this.gameObject);
     }
 
     void Start()
     {
         // need to set audio source to use singular audio clip
         audioSource = GetComponent<AudioSource>();
+        anim = GetComponent<Animator>();
+
+        
     }
 
 
@@ -56,17 +56,23 @@ public class PlayerController : MonoBehaviour
 		
 	}
 	void Move(){
-		float moveInput = Input.GetAxis ("Horizontal");
-		
-		rb2d.velocity = new Vector2(moveInput * speed, rb2d.velocity.y);
-		
-		if(facingRight==false&&moveInput>0){
-			Flip();
-		}
-		else if(facingRight==true&&moveInput<0){
-			Flip();
-		}
-	}
+        float moveInput = Input.GetAxis("Horizontal");
+
+        rb2d.velocity = new Vector2(moveInput * speed, rb2d.velocity.y);
+
+        if ((anim.GetBool("facingRight") == false) && (moveInput > 0))
+        {
+            anim.SetBool("facingRight", true);
+            Flip();
+        }
+        else if ((anim.GetBool("facingRight") == true) && (moveInput < 0))
+        {
+            anim.SetBool("facingRight", false);
+            Flip();
+        }
+
+
+    }
 	void Jump(){
 		
 		if(isGrounded==true){
@@ -75,12 +81,12 @@ public class PlayerController : MonoBehaviour
         }
 		
 	}
-	
-	void Flip(){
-		facingRight = !facingRight;
-		Vector3 Scaler = transform.localScale;
-		Scaler.x*=-1;
-		transform.localScale=Scaler;
-	}
+
+    public void Flip()
+    {
+        Vector3 Scaler = transform.localScale;
+        Scaler.x *= -1;
+        transform.localScale = Scaler;
+    }
 }
 

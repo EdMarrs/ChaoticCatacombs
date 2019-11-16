@@ -14,6 +14,7 @@ public class whipAttackScript : MonoBehaviour
     public LayerMask whatIsEnemies;
     public int damage = 1;
     private Animator anim;
+    private Animator playerAnim;
     public GameObject whip;
     public AudioClip attackSound;
     AudioSource audioSource;
@@ -24,6 +25,7 @@ public class whipAttackScript : MonoBehaviour
     void Start()
     {
         anim = whip.GetComponent<Animator>();
+        playerAnim = GameObject.Find("Player").GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
     }
     // Start is called before the first frame update
@@ -35,7 +37,9 @@ public class whipAttackScript : MonoBehaviour
             if (Input.GetKey(KeyCode.Z))
             {
                 anim.SetTrigger("usingWhip");
+                playerAnim.SetTrigger("isAttacking");
                 audioSource.PlayOneShot(attackSound, 1F);
+
 
                 Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX,attackRangeY),0, whatIsEnemies);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
@@ -44,11 +48,14 @@ public class whipAttackScript : MonoBehaviour
                 }
                 timeBtwnAttack = startTimeBtwAttack;
             }
+            
 
         }
         else
         {
+            
             timeBtwnAttack -= Time.deltaTime;
+            
         }
     }
     void OnDrawGizmosSelected()

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.Tilemaps;
-using SuperTiled2Unity;
 
 namespace SuperTiled2Unity.Editor
 {
@@ -13,7 +10,6 @@ namespace SuperTiled2Unity.Editor
     public class CollisionBuilder
     {
         private GameObject m_TilemapGameObject;
-        private Tilemap m_Tilemap;
         private Dictionary<uint, TilePolygonCollection> m_TilePolygonDatabase;
         private Dictionary<CollisionClipperKey, CollisionClipper> m_CollisionClippers = new Dictionary<CollisionClipperKey, CollisionClipper>();
         private SuperImportContext m_ImportContext;
@@ -21,15 +17,12 @@ namespace SuperTiled2Unity.Editor
         public CollisionBuilder(GameObject goTilemap, Dictionary<uint, TilePolygonCollection> tilePolygonDatabase, SuperImportContext importContext)
         {
             m_TilemapGameObject = goTilemap;
-            m_Tilemap = m_TilemapGameObject.GetComponentInParent<Tilemap>();
             m_TilePolygonDatabase = tilePolygonDatabase;
             m_ImportContext = importContext;
         }
 
         public void PlaceTileColliders(SuperMap map, SuperTile tile, TileIdMath tileId, Vector3Int pos)
         {
-            Assert.IsNotNull(m_Tilemap, "Need a Tilemap component if we are going to gather tile colliders");
-
             // Do we have any collider objects defined for this tile?
             if (!tile.m_CollisionObjects.IsEmpty())
             {
@@ -38,16 +31,7 @@ namespace SuperTiled2Unity.Editor
                 foreach (var poly in polygons.Polygons)
                 {
                     // Offset the polygon so that it is in the location of the tile
-                    var offset = map.CellPositionToLocalPosition(pos.x, pos.y);
-
-                    if (map.m_Orientation == MapOrientation.Isometric || map.m_Orientation == MapOrientation.Staggered)
-                    {
-                        offset -= m_ImportContext.MakePointPPU(map.m_TileWidth, 0) * 0.5f;
-                    }
-                    else if (map.m_Orientation == MapOrientation.Hexagonal)
-                    {
-                        offset -= m_ImportContext.MakePointPPU(map.m_TileWidth, map.m_TileHeight) * 0.5f;
-                    }
+                    var offset = map.CellPositionToLocalPosition(pos.x, pos.y, m_ImportContext);
 
                     var points = poly.Points.Select(pt => pt + offset).ToArray();
 
@@ -141,7 +125,7 @@ namespace SuperTiled2Unity.Editor
                         edgeCollider.gameObject.AddComponent<SuperColliderComponent>();
                     }
 
-                    composite.GenerateGeometry();
+                    composite.ST2UGenerateGeometry();
                 }
             }
         }

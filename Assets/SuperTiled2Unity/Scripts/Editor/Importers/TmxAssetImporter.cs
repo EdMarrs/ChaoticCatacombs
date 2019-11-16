@@ -5,12 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 using System.Xml.Linq;
-using SuperTiled2Unity;
 using UnityEditor;
 using UnityEditor.Experimental.AssetImporters;
 using UnityEngine;
 using UnityEngine.Assertions;
-using UnityEngine.Tilemaps;
 
 namespace SuperTiled2Unity.Editor
 {
@@ -81,8 +79,11 @@ namespace SuperTiled2Unity.Editor
                 // Custom properties need to be in place before we process the map layers
                 AddSuperCustomProperties(m_MapComponent.gameObject, xMap.Element("properties"));
 
-                // Add layers to our grid object
-                ProcessMapLayers(m_GridComponent.gameObject, xMap);
+                using (SuperImportContext.BeginIsTriggerOverride(m_MapComponent.gameObject))
+                {
+                    // Add layers to our grid object
+                    ProcessMapLayers(m_GridComponent.gameObject, xMap);
+                }
             }
         }
 
@@ -146,14 +147,14 @@ namespace SuperTiled2Unity.Editor
             float sx = SuperImportContext.MakeScalar(m_MapComponent.m_TileWidth);
             float sy = SuperImportContext.MakeScalar(m_MapComponent.m_TileHeight);
             m_GridComponent.cellSize = new Vector3(sx, sy, 1);
-            var localPosition = new Vector3(0, 0, 0);
+            var tileAnchor = new Vector3(0, 0, 0);
 
             switch (m_MapComponent.m_Orientation)
             {
 #if UNITY_2018_3_OR_NEWER
                 case MapOrientation.Isometric:
                     m_GridComponent.cellLayout = GridLayout.CellLayout.Isometric;
-                    localPosition = new Vector3(0, -sy, 0);
+                    tileAnchor = new Vector3(-1.5f, -0.5f, 0);
                     break;
 
                 case MapOrientation.Staggered:
@@ -163,22 +164,23 @@ namespace SuperTiled2Unity.Editor
                     {
                         if (m_MapComponent.m_StaggerIndex == StaggerIndex.Odd)
                         {
-                            localPosition = new Vector3(sx * 0.5f, -sy, 0);
+                            tileAnchor = new Vector3(-1, -1, 0);
                         }
                         else
                         {
-                            localPosition = new Vector3(sx, -sy, 0);
+                            tileAnchor = new Vector3(-0.5f, -1.5f, 0);
                         }
                     }
                     else if (m_MapComponent.m_StaggerAxis == StaggerAxis.X)
                     {
                         if (m_MapComponent.m_StaggerIndex == StaggerIndex.Odd)
                         {
-                            localPosition = new Vector3(sx * 0.5f, -sy, 0);
+                            tileAnchor = new Vector3(-1, -1, 0);
                         }
                         else
                         {
-                            localPosition = new Vector3(sx * 0.5f, -sy * 1.5f, 0);
+                            // X-Even
+                            tileAnchor = new Vector3(-1.5f, -1.5f, 0);
                         }
                     }
                     break;
@@ -192,11 +194,13 @@ namespace SuperTiled2Unity.Editor
 
                         if (m_MapComponent.m_StaggerIndex == StaggerIndex.Odd)
                         {
-                            localPosition = new Vector3(sx * 0.5f, sy * -0.5f, 0);
+                            // Y-Odd
+                            tileAnchor = new Vector3(-0.5f, -4/3.0f, 0);
                         }
                         else
                         {
-                            localPosition = new Vector3(sx * 0.5f, sy * 0.25f, 0);
+                            // Y-Even
+                            tileAnchor = new Vector3(0, -1/3.0f, 0);
                         }
                     }
                     else if (m_MapComponent.m_StaggerAxis == StaggerAxis.X)
@@ -208,22 +212,22 @@ namespace SuperTiled2Unity.Editor
 
                         if (m_MapComponent.m_StaggerIndex == StaggerIndex.Odd)
                         {
-                            localPosition = new Vector3(sx * -0.25f, -sy, 0);
+                            tileAnchor = new Vector3(-2, -1, 0);
                         }
                         else
                         {
-                            localPosition = new Vector3(sx * 0.5f, -sy, 0);
+                            tileAnchor = new Vector3(-1.5f, 0, 0);
                         }
                     }
                     break;
 #endif
                 default:
                     m_GridComponent.cellLayout = GridLayout.CellLayout.Rectangle;
-                    localPosition = new Vector3(0, -sy, 0);
+                    tileAnchor = new Vector3(0, -1, 0);
                     break;
             }
 
-            m_GridComponent.transform.localPosition = localPosition;
+            SuperImportContext.TileAnchor = tileAnchor;
 
             return true;
         }
@@ -327,21 +331,42 @@ namespace SuperTiled2Unity.Editor
                     continue;
                 }
 
-                if (xNode.Name == "layer")
+                LayerIgnoreMode ignoreMode = xNode.GetPropertyAttributeAs(StringConstants.Unity_Ignore, SuperImportContext.LayerIgnoreMode);
+                if (ignoreMode == LayerIgnoreMode.True)
                 {
-                    ProcessTileLayer(goParent, xNode);
+                    continue;
                 }
-                else if (xNode.Name == "group")
+
+                using (SuperImportContext.BeginLayerIgnoreMode(ignoreMode))
                 {
-                    ProcessGroupLayer(goParent, xNode);
-                }
-                else if (xNode.Name == "objectgroup")
-                {
-                    ProcessObjectLayer(goParent, xNode);
-                }
-                else if (xNode.Name == "imagelayer")
-                {
-                    ProcessImageLayer(goParent, xNode);
+                    SuperLayer layer = null;
+
+                    if (xNode.Name == "layer")
+                    {
+                        layer = ProcessTileLayer(goParent, xNode);
+                    }
+                    else if (xNode.Name == "group")
+                    {
+                        layer = ProcessGroupLayer(goParent, xNode);
+                    }
+                    else if (xNode.Name == "objectgroup")
+                    {
+                        layer = ProcessObjectLayer(goParent, xNode);
+                    }
+                    else if (xNode.Name == "imagelayer")
+                    {
+                        layer = ProcessImageLayer(goParent, xNode);
+                    }
+
+                    if (layer != null)
+                    {
+                        CustomProperty zprop;
+                        if (layer.gameObject.TryGetCustomPropertySafe(StringConstants.Unity_ZPosition, out zprop))
+                        {
+                            float zpos = zprop.GetValueAsFloat();
+                            layer.gameObject.transform.Translate(0, 0, zpos);
+                        }
+                    }
                 }
             }
         }
@@ -389,7 +414,7 @@ namespace SuperTiled2Unity.Editor
         {
             if (!string.IsNullOrEmpty(m_CustomImporterClassName))
             {
-                var type = Type.GetType(m_CustomImporterClassName);
+                var type = AppDomain.CurrentDomain.GetTypeFromName(m_CustomImporterClassName);
 
                 if (type == null)
                 {
