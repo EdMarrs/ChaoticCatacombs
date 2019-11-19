@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
@@ -40,7 +40,8 @@ public class PhotonManager : MonoBehaviourPunCallbacks
          */
         PhotonNetwork.Instantiate("Player", transform.position, Quaternion.identity, 0);
 
-        // disable the lobbyCamera
+        GameObject.Find("Player(Clone)").name = "Player";
+
         lobbyCamera.SetActive(false);
 
 
