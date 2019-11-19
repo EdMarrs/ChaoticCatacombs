@@ -39,7 +39,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
          * @param position, we can give a new random vector, or different preset spawn points
          */
         PhotonNetwork.Instantiate("Player", transform.position, Quaternion.identity, 0);
-
+        GameObject.Find("Player(Clone)").name = "Player";
         // disable the lobbyCamera
         lobbyCamera.SetActive(false);
 
