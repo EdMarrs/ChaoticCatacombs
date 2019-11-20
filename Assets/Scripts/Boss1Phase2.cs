@@ -85,16 +85,7 @@ public class Boss1Phase2 : MonoBehaviour
         if (alpha == false)
         {
             StartCoroutine(Alpha());
-/*
-            if (axis.z == -1)
-            {
-                transform.position = new Vector3(-7, 12, 0);
-            }
-            else if (axis.z == 1)
-            {
-                transform.position = new Vector3(7, 12, 0);
-            }
-            */
+
             // move platforms down
             transform.position += new Vector3(0 * Time.deltaTime, -1 * Time.deltaTime, 0);
         }
