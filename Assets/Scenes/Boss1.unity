@@ -13642,7 +13642,7 @@ GameObject:
   - component: {fileID: 470059417}
   - component: {fileID: 470059418}
   - component: {fileID: 470059419}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Skull Head
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -19459,11 +19459,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: -2087726463568371670, guid: 61f836d9f5a750748863c3e4e04d535e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 4787287726809199740, guid: 61f836d9f5a750748863c3e4e04d535e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19530,6 +19525,31 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -7395558932475632408, guid: 61f836d9f5a750748863c3e4e04d535e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -6929790921337996046, guid: 61f836d9f5a750748863c3e4e04d535e,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.20754719
+      objectReference: {fileID: 0}
+    - target: {fileID: -6929790921337996046, guid: 61f836d9f5a750748863c3e4e04d535e,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6929790921337996046, guid: 61f836d9f5a750748863c3e4e04d535e,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.20754719
+      objectReference: {fileID: 0}
+    - target: {fileID: -6929790921337996046, guid: 61f836d9f5a750748863c3e4e04d535e,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.73333335
+      objectReference: {fileID: 0}
+    - target: {fileID: -2087726463568371670, guid: 61f836d9f5a750748863c3e4e04d535e,
         type: 3}
       propertyPath: m_Layer
       value: 8
@@ -22048,26 +22068,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: -6929790921337996046, guid: 61f836d9f5a750748863c3e4e04d535e,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.20754719
-      objectReference: {fileID: 0}
-    - target: {fileID: -6929790921337996046, guid: 61f836d9f5a750748863c3e4e04d535e,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -6929790921337996046, guid: 61f836d9f5a750748863c3e4e04d535e,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.20754719
-      objectReference: {fileID: 0}
-    - target: {fileID: -6929790921337996046, guid: 61f836d9f5a750748863c3e4e04d535e,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 0.73333335
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1749935619756012359, guid: 61f836d9f5a750748863c3e4e04d535e, type: 3}
