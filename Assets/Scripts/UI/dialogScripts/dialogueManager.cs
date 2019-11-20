@@ -75,9 +75,12 @@ public class dialogueManager : MonoBehaviour
 
     IEnumerator delay(string room)
     {
-    	for (int i = 0; i < 500; i++)
+    	for (int i = 0; i < 850; i++)
     		yield return null;
     	GameObject.Find(room).GetComponent<Text>().text = "";
+        BoxCollider2D temp = GameObject.Find(room).GetComponent<BoxCollider2D>();
+        if (temp != null)
+            Destroy(temp);
     }
 
 
