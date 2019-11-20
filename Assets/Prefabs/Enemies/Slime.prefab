@@ -178,8 +178,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   miniSlime: {fileID: 4763863160399567512, guid: a96d87257941dfa41880e8bb793f38ba,
     type: 3}
-  chanceToSpawnHealth: 50
-  healthToSpawn: {fileID: 0}
 --- !u!95 &8566048268526488213
 Animator:
   serializedVersion: 3
