@@ -113,7 +113,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.17, y: -10.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: [{fileID: 6804913875037294989}]
+  m_Children:
+  - {fileID: 6804913875037294989}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -258,6 +259,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   miniSlime: {fileID: 4763863160399567512, guid: a96d87257941dfa41880e8bb793f38ba,
     type: 3}
+  chanceToSpawnHealth: 50
+  healthToSpawn: {fileID: 0}
 --- !u!95 &8566048268526488213
 Animator:
   serializedVersion: 3
