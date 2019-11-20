@@ -7,6 +7,9 @@ TagManager:
   - enemy
   - terrain
   - items
+  - Long
+  - Longboi
+  - Shortboi
   layers:
   - Default
   - TransparentFX
