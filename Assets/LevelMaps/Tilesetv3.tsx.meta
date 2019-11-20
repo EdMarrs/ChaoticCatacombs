@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 87e87106ab6814a48a65cf4c77afce79
+guid: 5a09d506df35a86429033f8eb1147546
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -8,10 +8,9 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
-  missingFiles:
-  - Assets/Documents/GitHub/ChaoticCatacombs/Assets/LevelMaps/simpleGraphics_tiles16x16.png
+  missingFiles: []
   errors:
-  - 'Missing texture asset: ../Documents/GitHub/ChaoticCatacombs/Assets/LevelMaps/simpleGraphics_tiles16x16.png'
+  - 'Missing texture asset: ../Documents/GitHub/ChaoticCatacombs/Assets/LevelMaps/Tilesetv3.png'
   warnings: []
   missingSortingLayers: []
   missingLayers: []
