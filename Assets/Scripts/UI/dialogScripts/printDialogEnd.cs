@@ -12,7 +12,7 @@ public class printDialogEnd : MonoBehaviour
     void Start()
     {
         lines = new Queue<string>();
-        FindObjectOfType<dialogTrigger2>().triggerDialog();
+        FindObjectOfType<dialogTrigger>().triggerDialog();
     }
 
     public void StartDialog(Dialog dialog)
@@ -39,35 +39,17 @@ public class printDialogEnd : MonoBehaviour
 
     IEnumerator type(string sentence)
     {
-    	if(lines.Count == 9)
-        {
-            FindObjectOfType<changeAesthetic2>().swap();
-        }
-
-        else if(lines.Count == 3)
-        {
-            FindObjectOfType<changeAesthetic2>().swap();
-        }
-        dialogText.text = "";
+    	dialogText.text = "";
     	foreach (char letter in sentence.ToCharArray())
     	{
     		dialogText.text += letter;
-    		for (int i = 0; i < 7; i++)
+    		for (int i = 0; i < 5; i++)
     			yield return null;
     	}
-        if (lines.Count == 0)
-        {
-            FindObjectOfType<changeAesthetic2>().swap();
-            for (int i = 0; i < 60; i++)
-                yield return null;
-            FindObjectOfType<changeAesthetic2>().swap();
-        }
-        StartCoroutine(FindObjectOfType<blinkButton>().blink());
     }
 
     public void end()
     {
-        //Sends the player back to the main menu
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 }
