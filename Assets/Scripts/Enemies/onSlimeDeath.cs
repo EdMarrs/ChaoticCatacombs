@@ -21,6 +21,10 @@ public class onSlimeDeath : MonoBehaviour
        
             anim.SetBool("isDead", true);
             //Instantiate(miniSlime, transform.position + new Vector3(0, 0, 0), Quaternion.identity);
+            if (GameObject.Find("Player").GetComponent<advSpecial>().SpecialBarCurr < GameObject.Find("Player").GetComponent<advSpecial>().SpecialBarMax)
+            {
+                GameObject.Find("Player").GetComponent<advSpecial>().SpecialBarCurr = GameObject.Find("Player").GetComponent<advSpecial>().SpecialBarCurr + 10;
+            }
             Destroy(gameObject,.5f);
 
             

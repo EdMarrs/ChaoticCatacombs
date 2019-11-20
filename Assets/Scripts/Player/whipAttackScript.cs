@@ -34,7 +34,7 @@ public class whipAttackScript : MonoBehaviour
         if (timeBtwnAttack <= 0)
         {
 
-            if (Input.GetKey(KeyCode.Z))
+            if (Input.GetKey(KeyCode.Z) || Input.GetKeyDown("joystick button 1"))
             {
                 anim.SetTrigger("usingWhip");
                 playerAnim.SetTrigger("isAttacking");

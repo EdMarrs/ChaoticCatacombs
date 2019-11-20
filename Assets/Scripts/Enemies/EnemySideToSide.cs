@@ -13,9 +13,11 @@ public class EnemySideToSide : MonoBehaviour{
 	private float leftWayPoint;
 	private float rightWayPoint;
 	Vector3 localScale;
-	
-	
-	public Vector3 velCopy;
+    
+
+
+
+    public Vector3 velCopy;
 	
 	void Awake()
     {
@@ -31,6 +33,7 @@ public class EnemySideToSide : MonoBehaviour{
         rb2d = GetComponent<Rigidbody2D> ();
 		leftWayPoint=transform.position.x-leftMove;
 		rightWayPoint=rightMove+transform.position.x;
+        
 		
     }
 	
@@ -39,8 +42,7 @@ public class EnemySideToSide : MonoBehaviour{
     
 	 void Update()
     {
-		
-		
+        
         
         if(transform.position.x >=rightWayPoint){
             isGoingRight=false;
@@ -50,6 +52,7 @@ public class EnemySideToSide : MonoBehaviour{
 			
             isGoingRight=true;
         }
+       
 		if (isGoingRight==true){
 			moveRight();
 		}
@@ -58,6 +61,7 @@ public class EnemySideToSide : MonoBehaviour{
 		}
 		
 		velCopy = rb2d.velocity;
+        
         
 	}
 	void moveRight(){

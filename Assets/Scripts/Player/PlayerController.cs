@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
 		
     }
 	void Update(){
-		if(Input.GetKeyDown(KeyCode.UpArrow)){
+		if(Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown("joystick button 0")){
 			Jump();
         }
 		

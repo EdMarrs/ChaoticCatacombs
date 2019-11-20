@@ -21,7 +21,7 @@ public class advSpecial : MonoBehaviour
     {
         if (!UsingSpecial)
         {
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKey(KeyCode.Space) || Input.GetKeyDown("joystick button 2"))
             {
                 if (SpecialBarCurr >= 100)
                 {

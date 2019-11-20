@@ -24,7 +24,7 @@ public class VerticalPlatform : MonoBehaviour
 
          // Player will fall through platform when down arrow key is pressed
         // They will continue to fall through platforms if they hold the key
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetAxis("Vertical")<0)
         {
         
             effector.rotationalOffset = 180f;
@@ -32,7 +32,7 @@ public class VerticalPlatform : MonoBehaviour
         }
 
 
-        if (Input.GetKeyUp(KeyCode.DownArrow))
+        if (Input.GetKeyUp(KeyCode.DownArrow) || Input.GetAxis("Vertical") >= 0)
         {
              effector.rotationalOffset = 0;
             
