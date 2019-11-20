@@ -8,16 +8,19 @@ public class PhotonManager : MonoBehaviourPunCallbacks
 {
     // create a lobby camera object we can disable upon connecting to the room
     [SerializeField] private GameObject lobbyCamera;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         // connects us to the server
         PhotonNetwork.ConnectUsingSettings();
+        
     }
 
     public override void OnConnectedToMaster()
     {
         PhotonNetwork.JoinLobby();
+        
     }
 
     public override void OnJoinedLobby()
@@ -38,11 +41,16 @@ public class PhotonManager : MonoBehaviourPunCallbacks
          * 
          * @param position, we can give a new random vector, or different preset spawn points
          */
-        PhotonNetwork.Instantiate("Player", transform.position, Quaternion.identity, 0);
+        
+        PhotonNetwork.Instantiate(player.name, transform.position, Quaternion.identity, 0);
+        
 
-        GameObject.Find("Player(Clone)").name = "Player";
+        GameObject.Find("Player(MultiplayerVersion)(Clone)").name = "Player";
+        Destroy(GameObject.Find("Player Camera"));
 
         lobbyCamera.SetActive(false);
+
+        PhotonNetwork.InstantiateSceneObject("TheBoiMultiplayer", transform.position, Quaternion.identity, 0, null);
 
 
     }

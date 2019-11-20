@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5393778662110389869}
   - component: {fileID: 5393778662110389870}
   - component: {fileID: -38582758024250076}
+  - component: {fileID: -5393230740763282712}
   m_Layer: 0
   m_Name: TheBoi
   m_TagString: enemy
@@ -124,8 +125,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeb4be5cb243e7846a202b050b0a1442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossSpike: {fileID: 3373144598869071608, guid: 6a9ef5ed4ac398b42af175510fe64e85,
-    type: 3}
+  bossOrb: {fileID: 0}
+  homingOrb: {fileID: 0}
+  speed: 10
+  homingThresh: 5
 --- !u!114 &-38582758024250076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,3 +144,15 @@ MonoBehaviour:
   health: 20
   blood: {fileID: 3279970183438373453, guid: 04938968485166b419147cb6753c46ab, type: 3}
   thrust: 10000
+--- !u!114 &-5393230740763282712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5393778662110389866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e70eb0ec87e6924b88be5b4f9ee005c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

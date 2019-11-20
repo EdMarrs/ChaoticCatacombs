@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb2d;
     private Animator anim;
 	 
-	 public float jumpForce=20;
+	 public float jumpForce=35;
 	 public bool isGrounded;
 	 public Transform groundCheck;
 	 public float checkRadius;

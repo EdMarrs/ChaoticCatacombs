@@ -14,7 +14,7 @@ public class onBoiDeath : MonoBehaviour
         {
             Debug.Log("Killing Enemy");
             //Animation/Transition Here
-            UnityEngine.SceneManagement.SceneManager.LoadScene(5);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
 
         }
     }
