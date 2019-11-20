@@ -85,9 +85,11 @@ public class PlayerIsHit : MonoBehaviour
 	   if(iFrames==true){
 		   
 		iCounter += Time.deltaTime;
+		
 
 		}
 		if (iCounter >= iTime){
+			
 			iCounter = 0;
 			iFrames = false;
 			Debug.Log("not invincible");
