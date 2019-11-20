@@ -27022,6 +27022,72 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 32.48
       objectReference: {fileID: 0}
+    - target: {fileID: 5481142733925613806, guid: f6b1df72650fb4e478956828581c869e,
+        type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 8159176974313834457, guid: 92b419e86505c9042886fedb0c4e16c1,
+        type: 3}
+    - target: {fileID: 7088382051483416728, guid: f6b1df72650fb4e478956828581c869e,
+        type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 8159176974313834457, guid: 92b419e86505c9042886fedb0c4e16c1,
+        type: 3}
+    - target: {fileID: 7088382051555552142, guid: f6b1df72650fb4e478956828581c869e,
+        type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 8159176974313834457, guid: 92b419e86505c9042886fedb0c4e16c1,
+        type: 3}
+    - target: {fileID: 7088382051622564572, guid: f6b1df72650fb4e478956828581c869e,
+        type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 8159176974313834457, guid: 92b419e86505c9042886fedb0c4e16c1,
+        type: 3}
+    - target: {fileID: 7088382052209069427, guid: f6b1df72650fb4e478956828581c869e,
+        type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 8159176974313834457, guid: 92b419e86505c9042886fedb0c4e16c1,
+        type: 3}
+    - target: {fileID: 7088382052451230351, guid: f6b1df72650fb4e478956828581c869e,
+        type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 8159176974313834457, guid: 92b419e86505c9042886fedb0c4e16c1,
+        type: 3}
+    - target: {fileID: 7088382052621944939, guid: f6b1df72650fb4e478956828581c869e,
+        type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 8159176974313834457, guid: 92b419e86505c9042886fedb0c4e16c1,
+        type: 3}
+    - target: {fileID: 7088382052734160642, guid: f6b1df72650fb4e478956828581c869e,
+        type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 8159176974313834457, guid: 92b419e86505c9042886fedb0c4e16c1,
+        type: 3}
+    - target: {fileID: 7088382052853919016, guid: f6b1df72650fb4e478956828581c869e,
+        type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 8159176974313834457, guid: 92b419e86505c9042886fedb0c4e16c1,
+        type: 3}
+    - target: {fileID: 7088382053253581007, guid: f6b1df72650fb4e478956828581c869e,
+        type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 8159176974313834457, guid: 92b419e86505c9042886fedb0c4e16c1,
+        type: 3}
+    - target: {fileID: 7088382053267646533, guid: f6b1df72650fb4e478956828581c869e,
+        type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 8159176974313834457, guid: 92b419e86505c9042886fedb0c4e16c1,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6b1df72650fb4e478956828581c869e, type: 3}
 --- !u!1 &1305592521
@@ -27165,11 +27231,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5226546667882513651, guid: 35f3a8cf30554cf41aa3d76a8ecd0f56,
-        type: 3}
-      propertyPath: jumpForce
-      value: 35
-      objectReference: {fileID: 0}
     - target: {fileID: 5226546666765090527, guid: 35f3a8cf30554cf41aa3d76a8ecd0f56,
         type: 3}
       propertyPath: hearts.Array.data[0]
@@ -27229,6 +27290,16 @@ PrefabInstance:
         type: 3}
       propertyPath: specialBarMax
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 323917535652292377, guid: 35f3a8cf30554cf41aa3d76a8ecd0f56,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226546667882513651, guid: 35f3a8cf30554cf41aa3d76a8ecd0f56,
+        type: 3}
+      propertyPath: jumpForce
+      value: 33
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8594992146481851256, guid: 35f3a8cf30554cf41aa3d76a8ecd0f56, type: 3}
