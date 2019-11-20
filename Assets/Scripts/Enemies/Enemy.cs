@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     
 	public void TakeDamage(int damage){
 		Instantiate(blood, transform.position, Quaternion.identity);
+
 		health-=damage;
 		Debug.Log("Damage Taken");
 	}

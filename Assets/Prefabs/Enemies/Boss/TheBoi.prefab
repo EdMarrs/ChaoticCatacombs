@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 5393778662110389871}
   - component: {fileID: 5393778662110389869}
   - component: {fileID: 5393778662110389870}
+  - component: {fileID: -38582758024250076}
   m_Layer: 0
   m_Name: TheBoi
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,7 +111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6caa79efd46d7dc478c2dedbf44eef15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossHP: 20
   phase: 1
 --- !u!114 &5393778662110389870
 MonoBehaviour:
@@ -126,3 +126,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossSpike: {fileID: 3373144598869071608, guid: 6a9ef5ed4ac398b42af175510fe64e85,
     type: 3}
+--- !u!114 &-38582758024250076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5393778662110389866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3669895e170ae534f9a9e20c439e23c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
+  blood: {fileID: 3279970183438373453, guid: 04938968485166b419147cb6753c46ab, type: 3}
+  thrust: 10000
