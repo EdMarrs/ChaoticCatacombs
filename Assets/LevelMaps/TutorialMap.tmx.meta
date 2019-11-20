@@ -1,0 +1,101 @@
+fileFormatVersion: 2
+guid: 0395b74d240b21a41a9b3ed748331ddc
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 1fa25d03934ea624a82bf2fcee6f0873, type: 3}
+  missingFiles: []
+  errors:
+  - 'Missing texture asset: ../Documents/GitHub/ChaoticCatacombs/Assets/LevelMaps/Tilesetv3.png'
+  - 'Missing texture asset: ../Documents/GitHub/ChaoticCatacombs/Assets/LevelMaps/spr_torch.png'
+  - Could not find tile 35. Make sure the tilesets were successfully imported.
+  - Could not find tile 36. Make sure the tilesets were successfully imported.
+  - Could not find tile 71. Make sure the tilesets were successfully imported.
+  - Could not find tile 70. Make sure the tilesets were successfully imported.
+  - Could not find tile 69. Make sure the tilesets were successfully imported.
+  - Could not find tile 52. Make sure the tilesets were successfully imported.
+  - Could not find tile 53. Make sure the tilesets were successfully imported.
+  - Could not find tile 54. Make sure the tilesets were successfully imported.
+  - Could not find tile 55. Make sure the tilesets were successfully imported.
+  - Could not find tile 56. Make sure the tilesets were successfully imported.
+  - Could not find tile 11. Make sure the tilesets were successfully imported.
+  - Could not find tile 12. Make sure the tilesets were successfully imported.
+  - Could not find tile 72. Make sure the tilesets were successfully imported.
+  - Could not find tile 73. Make sure the tilesets were successfully imported.
+  - Could not find tile 28. Make sure the tilesets were successfully imported.
+  - Could not find tile 29. Make sure the tilesets were successfully imported.
+  - Could not find tile 86. Make sure the tilesets were successfully imported.
+  - Could not find tile 87. Make sure the tilesets were successfully imported.
+  - Could not find tile 88. Make sure the tilesets were successfully imported.
+  - Could not find tile 89. Make sure the tilesets were successfully imported.
+  - Could not find tile 90. Make sure the tilesets were successfully imported.
+  - Could not find tile 13. Make sure the tilesets were successfully imported.
+  - Could not find tile 30. Make sure the tilesets were successfully imported.
+  - Could not find tile 16. Make sure the tilesets were successfully imported.
+  - Could not find tile 11. Make sure the tilesets were successfully imported.
+  - Could not find tile 12. Make sure the tilesets were successfully imported.
+  - Could not find tile 28. Make sure the tilesets were successfully imported.
+  - Could not find tile 29. Make sure the tilesets were successfully imported.
+  - Could not find tile 108. Make sure the tilesets were successfully imported.
+  - Could not find tile 109. Make sure the tilesets were successfully imported.
+  - Could not find tile 57. Make sure the tilesets were successfully imported.
+  - Could not find tile 58. Make sure the tilesets were successfully imported.
+  - Could not find tile 64. Make sure the tilesets were successfully imported.
+  - Could not find tile 65. Make sure the tilesets were successfully imported.
+  - Could not find tile 247. Make sure the tilesets were successfully imported.
+  - Could not find tile 248. Make sure the tilesets were successfully imported.
+  - Could not find tile 249. Make sure the tilesets were successfully imported.
+  - Could not find tile 125. Make sure the tilesets were successfully imported.
+  - Could not find tile 126. Make sure the tilesets were successfully imported.
+  - Could not find tile 81. Make sure the tilesets were successfully imported.
+  - Could not find tile 82. Make sure the tilesets were successfully imported.
+  - Could not find tile 79. Make sure the tilesets were successfully imported.
+  - Could not find tile 23. Make sure the tilesets were successfully imported.
+  - Could not find tile 45. Make sure the tilesets were successfully imported.
+  - Could not find tile 9. Make sure the tilesets were successfully imported.
+  - Could not find tile 80. Make sure the tilesets were successfully imported.
+  - Could not find tile 98. Make sure the tilesets were successfully imported.
+  - Could not find tile 99. Make sure the tilesets were successfully imported.
+  - Could not find tile 888. Make sure the tilesets were successfully imported.
+  - Could not find tile 142. Make sure the tilesets were successfully imported.
+  - Could not find tile 143. Make sure the tilesets were successfully imported.
+  - Could not find tile 91. Make sure the tilesets were successfully imported.
+  - Could not find tile 92. Make sure the tilesets were successfully imported.
+  - Could not find tile 96. Make sure the tilesets were successfully imported.
+  - Could not find tile 97. Make sure the tilesets were successfully imported.
+  - Could not find tile 148. Make sure the tilesets were successfully imported.
+  - Could not find tile 111. Make sure the tilesets were successfully imported.
+  - Could not find tile 16. Make sure the tilesets were successfully imported.
+  - Could not find tile 130. Make sure the tilesets were successfully imported.
+  - Could not find tile 113. Make sure the tilesets were successfully imported.
+  - Could not find tile 399. Make sure the tilesets were successfully imported.
+  - Could not find tile 400. Make sure the tilesets were successfully imported.
+  - Could not find tile 401. Make sure the tilesets were successfully imported.
+  - Could not find tile 209. Make sure the tilesets were successfully imported.
+  - Could not find tile 416. Make sure the tilesets were successfully imported.
+  - Could not find tile 417. Make sure the tilesets were successfully imported.
+  - Could not find tile 418. Make sure the tilesets were successfully imported.
+  - Could not find tile 19. Make sure the tilesets were successfully imported.
+  - Could not find tile 160. Make sure the tilesets were successfully imported.
+  - Could not find tile 95. Make sure the tilesets were successfully imported.
+  warnings:
+  - Tileset 'Tilesetv3' is an embedded tileset. Exported tilesets are preferred.
+  - Tileset 'spr_torch' is an embedded tileset. Exported tilesets are preferred.
+  missingSortingLayers: []
+  missingLayers: []
+  missingTags: []
+  importerVersion: 16
+  pixelsPerUnit: 100
+  edgesPerEllipse: 32
+  numberOfObjectsImported: 5
+  tilesAsObjects: 0
+  sortingMode: 0
+  isIsometric: 0
+  customImporterClassName: 
+  internalTilesets:
+  - {instanceID: 0}
+  - {instanceID: 0}
