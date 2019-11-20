@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7223650222503810434}
   - component: {fileID: 7892727826188877755}
   - component: {fileID: -6219316857897725804}
+  - component: {fileID: -5822077005830439261}
   m_Layer: 10
   m_Name: Bat
   m_TagString: enemy
@@ -130,6 +131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20719499de1a47648aae977d90d64ff4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chanceToSpawnHealth: 60
+  healthToSpawn: {fileID: 6651570129860078823, guid: df18849bde1304a4e9add1da13f5297d,
+    type: 3}
 --- !u!114 &1573388517573877204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +195,7 @@ SpriteRenderer:
   m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &7892727826188877755
@@ -227,3 +231,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
+--- !u!114 &-5822077005830439261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2914540932633691361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6272df4099d4e8f46be7e1d222d0e3dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

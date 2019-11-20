@@ -7,6 +7,11 @@ TagManager:
   - enemy
   - terrain
   - items
+  - Long
+  - Longboi
+  - Shortboi
+  - spike
+  - killspike
   layers:
   - Default
   - TransparentFX
@@ -23,7 +28,8 @@ TagManager:
   - Background Image
   - Items
   - BossBG
-  - 
+  - BossHead
+  - Spikes
   - 
   - 
   - 

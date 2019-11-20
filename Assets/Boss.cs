@@ -72,7 +72,7 @@ public class Boss : MonoBehaviour
 
         if (health <= 0)
         {
-            Instantiate(winner);
+            
             UnityEngine.SceneManagement.SceneManager.LoadScene(4);
             Destroy(gameObject);
         }

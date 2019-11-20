@@ -83,7 +83,7 @@ SpriteRenderer:
   m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &8566048268526488208
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  blood: {fileID: 3279970183438373453, guid: 04938968485166b419147cb6753c46ab, type: 3}
+  blood: {fileID: 3279970183438373453, guid: d1392757ed3195344ac81b1230de7bde, type: 3}
   thrust: 10000
 --- !u!114 &8566048268526488211
 MonoBehaviour:
