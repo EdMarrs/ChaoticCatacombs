@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -5092258983890491744}
   - component: {fileID: 6724330472863858042}
   - component: {fileID: 8339546090733310777}
-  - component: {fileID: -140140730172265483}
+  - component: {fileID: 618265547}
   m_Layer: 10
   m_Name: dummy
   m_TagString: enemy
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3193587173379595444}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -111,6 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20719499de1a47648aae977d90d64ff4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chanceToSpawnHealth: 50
+  healthToSpawn: {fileID: 6651570129860078823, guid: df18849bde1304a4e9add1da13f5297d,
+    type: 3}
 --- !u!61 &8339546090733310777
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -137,7 +140,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.78341407, y: 2.1617954}
   m_EdgeRadius: 0
---- !u!114 &-140140730172265483
+--- !u!114 &618265547
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,4 +154,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   blood: {fileID: 3279970183438373453, guid: b98ec8158a899a8469fc6302a4c61620, type: 3}
-  thrust: 1000
+  thrust: 10000
