@@ -31,7 +31,16 @@ public class HandManager : MonoBehaviour
     {
           Instantiate(p1HandL);
           Instantiate(p1HandR);
-    }
+
+        // resets values in different hands scripts
+        // disables hard mode
+        Boss1Phase1.rHandDead = false;
+        Boss1Phase1.lHandDead = false;
+        Boss1Phase2.rHandDead = false;
+        Boss1Phase2.lHandDead = false;
+        Boss1Phase3.rHandDead = false;
+        Boss1Phase3.lHandDead = false;
+}
 
 
     void Update()
