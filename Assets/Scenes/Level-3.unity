@@ -4773,6 +4773,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1120894151}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1409448594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409448593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e70eb0ec87e6924b88be5b4f9ee005c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &1409448600
 Rigidbody2D:
   serializedVersion: 4
