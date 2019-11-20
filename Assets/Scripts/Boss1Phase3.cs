@@ -37,13 +37,13 @@ public class Boss1Phase3 : MonoBehaviour
     public static bool lHandDead;
     public static bool rHandDead;
 
+    private bool alpha = false;
     private bool first = false;
     private bool second = false;
     private bool third = false;
     private bool rotationTest = false;
     private bool fourth = false;
     private bool fifth = false;
-
     private bool sixth = false;
     private bool seventh = false;
     private bool eighth = false;
@@ -105,7 +105,17 @@ public class Boss1Phase3 : MonoBehaviour
 
         // Beginning of boolean values & if statements to mangage IEnumerators
 
-        if (first == false)
+
+        // moves hands onto screen to start phase of battle
+        if (alpha == false)
+        {
+            StartCoroutine(Alpha());
+
+            // move platforms down
+            transform.position += new Vector3(0 * Time.deltaTime, -1 * Time.deltaTime, 0);
+        }
+
+        if (first == false && alpha == true)
         {
             StartCoroutine(A());
             BackNForthA();
@@ -212,8 +222,18 @@ public class Boss1Phase3 : MonoBehaviour
     }
 
 
-   
+
     // timers that act as delays for running functions
+
+
+    // starts phase of battle
+    IEnumerator Alpha()
+    {
+        Debug.Log("Alpha");
+        yield return new WaitForSeconds(10f);
+        alpha = true;
+
+    }
 
     IEnumerator A()
     {

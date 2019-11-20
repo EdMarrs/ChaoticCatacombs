@@ -38,7 +38,7 @@ PrefabInstance:
     - target: {fileID: 3675891121766413558, guid: fae7816f3d0c5934ca2488888ed6c561,
         type: 3}
       propertyPath: m_Name
-      value: L Hand Phase 3
+      value: L Hand Phase 3 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3675891121766413556, guid: fae7816f3d0c5934ca2488888ed6c561,
         type: 3}
@@ -48,7 +48,7 @@ PrefabInstance:
     - target: {fileID: 3675891121766413556, guid: fae7816f3d0c5934ca2488888ed6c561,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3675891121766413556, guid: fae7816f3d0c5934ca2488888ed6c561,
         type: 3}

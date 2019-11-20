@@ -16,6 +16,8 @@ public class MoveUp : MonoBehaviour
         transform.position += new Vector3(0 * Time.deltaTime, -1 * Time.deltaTime, 0);
 
 
+
+        // resets the platforms above of camera so they move in a conveyor-belt fashion
         if (transform.position.y <= -30)
         {
             if (this.gameObject.tag == "Shortboi")

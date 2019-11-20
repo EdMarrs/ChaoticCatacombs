@@ -29,6 +29,7 @@ public class Boss1Phase2 : MonoBehaviour
     public static bool lHandDead;
     public static bool rHandDead;
 
+    private bool alpha = false;
     private bool first = false;
     private bool second = false;
     private bool third = false;
@@ -80,10 +81,29 @@ public class Boss1Phase2 : MonoBehaviour
             }
         }
 
+        // moves hands onto screen to start phase of battle
+        if (alpha == false)
+        {
+            StartCoroutine(Alpha());
+/*
+            if (axis.z == -1)
+            {
+                transform.position = new Vector3(-7, 12, 0);
+            }
+            else if (axis.z == 1)
+            {
+                transform.position = new Vector3(7, 12, 0);
+            }
+            */
+            // move platforms down
+            transform.position += new Vector3(0 * Time.deltaTime, -1 * Time.deltaTime, 0);
+        }
+
         // rotate
-        if (first == false)
+        if (first == false && alpha == true)
         {
             StartCoroutine(A());
+            StopCoroutine(Alpha());
             fourth = false;
             fifth = false;
             sixth = false;
@@ -176,6 +196,15 @@ public class Boss1Phase2 : MonoBehaviour
             ResetBools();
         }
        
+
+    }
+
+    // starts phase of battle
+    IEnumerator Alpha()
+    {
+        Debug.Log("Alpha");
+        yield return new WaitForSeconds(10f);
+        alpha = true;
 
     }
 
