@@ -57,6 +57,7 @@ public class keyTrigger : MonoBehaviour
         if(key == 4)
         {
             Destroy(GameObject.Find("MainPlatform_M").GetComponent<BoxCollider2D>());
+            GameObject.Find("Open").GetComponent<Renderer>().enabled = true;
         }
     }
 }
