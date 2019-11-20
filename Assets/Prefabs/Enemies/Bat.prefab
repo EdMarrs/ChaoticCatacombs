@@ -130,6 +130,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20719499de1a47648aae977d90d64ff4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chanceToSpawnHealth: 60
+  healthToSpawn: {fileID: 6651570129860078823, guid: df18849bde1304a4e9add1da13f5297d,
+    type: 3}
 --- !u!114 &1573388517573877204
 MonoBehaviour:
   m_ObjectHideFlags: 0
