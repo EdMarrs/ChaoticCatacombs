@@ -19489,6 +19489,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: -2087726463568371670, guid: 61f836d9f5a750748863c3e4e04d535e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4787287726809199740, guid: 61f836d9f5a750748863c3e4e04d535e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19578,11 +19583,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.a
       value: 0.73333335
-      objectReference: {fileID: 0}
-    - target: {fileID: -2087726463568371670, guid: 61f836d9f5a750748863c3e4e04d535e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -7866376308010363266, guid: 61f836d9f5a750748863c3e4e04d535e,
         type: 3}
@@ -23041,5 +23041,10 @@ PrefabInstance:
       propertyPath: hearts.Array.data[4]
       value: 
       objectReference: {fileID: 1591877928}
+    - target: {fileID: 3860030691877519311, guid: 35f3a8cf30554cf41aa3d76a8ecd0f56,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35f3a8cf30554cf41aa3d76a8ecd0f56, type: 3}
