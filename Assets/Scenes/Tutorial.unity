@@ -5124,11 +5124,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 5226546666765090525, guid: 35f3a8cf30554cf41aa3d76a8ecd0f56,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5226546666765090527, guid: 35f3a8cf30554cf41aa3d76a8ecd0f56,
         type: 3}
       propertyPath: hearts.Array.data[0]
@@ -5158,6 +5153,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226546666765090525, guid: 35f3a8cf30554cf41aa3d76a8ecd0f56,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35f3a8cf30554cf41aa3d76a8ecd0f56, type: 3}

@@ -13,7 +13,12 @@ public class EnemySideToSide : MonoBehaviour{
 	private float leftWayPoint;
 	private float rightWayPoint;
 	Vector3 localScale;
-    
+
+    public bool isGrounded;
+    public Transform groundCheck;
+    public float checkRadius;
+    public LayerMask whatIsGround;
+
 
 
 
@@ -36,34 +41,49 @@ public class EnemySideToSide : MonoBehaviour{
         
 		
     }
-	
-   
-       
-    
-	 void Update()
+
+
+
+
+    void Update()
     {
-        
-        
-        if(transform.position.x >=rightWayPoint){
-            isGoingRight=false;
-			
-		}
-        if (transform.position.x <=leftWayPoint){
-			
-            isGoingRight=true;
+        //check to see if enemy is touching the ground
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+
+        if (isGrounded == true)
+        {
+
+
+            if (transform.position.x >= rightWayPoint)
+            {
+                isGoingRight = false;
+
+            }
+            if (transform.position.x <= leftWayPoint)
+            {
+
+                isGoingRight = true;
+            }
+
+            if (isGoingRight == true)
+            {
+                moveRight();
+            }
+            if (isGoingRight == false)
+            {
+                moveLeft();
+            }
+
+            velCopy = rb2d.velocity;
         }
-       
-		if (isGoingRight==true){
-			moveRight();
-		}
-		if(isGoingRight==false){
-			moveLeft();
-		}
-		
-		velCopy = rb2d.velocity;
-        
-        
-	}
+
+        void FixedUpdate()
+        {
+            //check to see if enemy is touching the ground
+            isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+
+        }
+    }
 	void moveRight(){
 
 		rb2d.velocity=new Vector2(speed, 0.0f);
