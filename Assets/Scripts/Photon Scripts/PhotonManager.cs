@@ -27,7 +27,9 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         
 
         GameObject.Find("Player(MultiplayerVersion)(Clone)").name = "Player";
+        
         Destroy(GameObject.Find("Player Camera"));
+        
 
         lobbyCamera.SetActive(false);
 
