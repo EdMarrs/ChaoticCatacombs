@@ -11,7 +11,7 @@ public class swordAttackScript : MonoBehaviour
 	public Transform attackPos;
 	public float attackRange;
 	public LayerMask whatIsEnemies;
-	public int damage=1;
+	public int damage = 1;
     public AudioClip attackSound;
     AudioSource audioSource;
 

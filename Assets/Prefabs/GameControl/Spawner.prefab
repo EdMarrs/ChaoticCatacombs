@@ -96,6 +96,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 8566048268526488214, guid: 716ac975b97bdad4d92694fd7da97e88, type: 3}
   - {fileID: 2914540932633691361, guid: 92b419e86505c9042886fedb0c4e16c1, type: 3}
+  - {fileID: 20041566702577548, guid: d0a5a8aeec791b942bcacb8809db67cc, type: 3}
   lowerSpawnAmt: 1
   upperSpawnAmt: 5
   spawnWithinLeft: 4
