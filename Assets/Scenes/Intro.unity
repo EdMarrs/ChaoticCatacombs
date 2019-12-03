@@ -457,31 +457,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 1015815947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 728144ded3bca104990520162c4e68a8, type: 3}
+  m_Script: {fileID: 11500000, guid: 94bcd5e7dc75b9642a70458b6904a2d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
     lines:
     - Adventure?
     - What truly defines an adventure?
-    - Is it the journey...the destination...?
-    - The call to adventure always draws attention.
-    - The suspense...the excitement...
-    - All the stories are...unpredictable
-    - or so we think...
-    - An adventure that is both wholesome and rewarding.
+    - "Is it the journey\u2026the destination\u2026?"
+    - "The call to adventure always draws\r\nattention."
+    - "The suspense, the excitement\u2026"
+    - "All the stories are\u2026unpredictable."
+    - "Or so we think\u2026"
+    - "An adventure that is both wholesome and\r\nrewarding."
     - Is THAT what you are looking for?
-    - Then, come step into the bar...
-    - See those mysterious characters over there?
-    - They are adventurers...
-    - or so they say.
+    - "Then, come step into the bar\u2026"
+    - "See those mysterious characters over\r\nthere?"
+    - They are adventurers!
+    - "Or so they claim\u2026"
     - Go listen to what they have to say.
-    - '...'
+    - "\u2026"
     - Oh wait no!
     - Do not make eye contact with that man.
-    - He is the most mysterious one of them all.
-    - Hear their tales, and judge for yourself
-    - what an adventure is to YOU!
+    - He is the most mysterious of them all.
+    - "Hear their tales, and judge for yourself\r\nwhat an adventure is to YOU!"
 --- !u!114 &1015815950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,7 +597,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1206119254}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23c98fbe08cb1634d8192e90ac7109bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 12b2d13bd2392c54699656ae5a5102da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogText: {fileID: 322848572}
