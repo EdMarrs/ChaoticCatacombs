@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class getName : MonoBehaviour
 {
+    //Test
     // Start is called before the first frame update
     void Start()
     {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class keepScale : MonoBehaviour
 {
+    //Test
     private bool flipped;
     // Start is called before the first frame update
     void Start()
