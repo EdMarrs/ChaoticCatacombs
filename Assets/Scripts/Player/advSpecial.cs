@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class advSpecial : MonoBehaviour
-{
+{//
     SpriteRenderer sprite;
     public float SpecialBarCurr = 100f;
     public float SpecialBarMax = 100f;

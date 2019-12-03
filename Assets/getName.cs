@@ -9,7 +9,9 @@ public class getName : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         GetComponent<TextMesh>().text = transform.parent.gameObject.GetComponent<PhotonView>().Owner.NickName;
+        Debug.Log("PrintME");
     }
 
     // Update is called once per frame

@@ -5,7 +5,7 @@ using Photon.Pun;
 using System.Collections;
 
 public class PlayerUI : MonoBehaviour
-{
+{//
 
     private PlayerNetworking target;
 
