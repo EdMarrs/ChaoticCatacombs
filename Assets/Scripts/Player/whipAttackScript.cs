@@ -22,6 +22,7 @@ public class whipAttackScript : MonoBehaviour
     /**** at the start of a scene, set the animations and audio ****/
     void Start()
     {
+
         anim = whip.GetComponent<Animator>();
         playerAnim = GameObject.Find("Player").GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
@@ -51,16 +52,14 @@ public class whipAttackScript : MonoBehaviour
                 {
                     enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);        // grab enemy component and damage them
                 }
+
                 timeBtwnAttack = startTimeBtwAttack;            // set time of attack to start of time attack
             }
-            
-
         }
         else
         {
             
             timeBtwnAttack -= Time.deltaTime;
-            
         }
     }
     /**** selects Gizmos in the Scene (Editor) view
@@ -68,6 +67,7 @@ public class whipAttackScript : MonoBehaviour
     ****/
     void OnDrawGizmosSelected()
     {
+
         Gizmos.color = Color.red;                                                               // set Gizmo color to red
         // draws wireframe using the attack position and X and Y-axes
         Gizmos.DrawWireCube(attackPos.position, new Vector2(attackRangeX, attackRangeY));

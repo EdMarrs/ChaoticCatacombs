@@ -12,13 +12,13 @@ public class advSpecial : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         sprite = GetComponent<SpriteRenderer>();        // grabs the sprite component
-
     }
-
     // Update is called once per frame
     void Update()
     {
+
         /** if the special has not been used, check the input to activate **/
         if (!UsingSpecial)
         {
@@ -37,12 +37,14 @@ public class advSpecial : MonoBehaviour
         }
         else
         {
+
             //Tried to do special ability and failed
         }
     }
     /**** iterates activated special ****/
     public IEnumerator ActivatedSpecial()
     {
+
         Debug.Log("hit special");                                                           // prints successful in Console
         int attackVal = gameObject.GetComponent<whipAttackScript>().damage;                 // sets attack value using the whipAttackScript
         int normalAttackVal = gameObject.GetComponent<whipAttackScript>().damage;           // sets normal attack value using the whipAttackScript
@@ -58,6 +60,7 @@ public class advSpecial : MonoBehaviour
             
             yield return new WaitForSeconds(0.1f);
         }
+
         gameObject.GetComponent<whipAttackScript>().damage= normalAttackVal;                // set back to normal attack value
         sprite.color = normalSpriteColor;                                                   // set bacl to normal sprite color
         Debug.Log("end special");                                                           // prints over in Console

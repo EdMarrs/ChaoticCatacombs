@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 /**** Takes care of Scene Management in the Main Menu ****/
 public class TitleScreen : MonoBehaviour
 {
+
     /*** Plays game upon hitting "Start" button ***/
     public void play()
     {
@@ -17,6 +18,7 @@ public class TitleScreen : MonoBehaviour
     /*** Quits game upon hitting "Quit" button ***/
     public void quit()
     {
+
         Debug.Log("Quit");
         Application.Quit();
     }
