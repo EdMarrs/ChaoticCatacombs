@@ -8,7 +8,7 @@ public class SlowDrop : MonoBehaviour
     Vector3 direction;
     float min;
     float max;
-    float units = 700.0f;
+    float units = 670.0f;
 
     // Start is called before the first frame update
     void Start()
