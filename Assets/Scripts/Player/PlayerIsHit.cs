@@ -37,7 +37,7 @@ public class PlayerIsHit : MonoBehaviour
                 audioSource.PlayOneShot(hurtSound, 1F);
 
            health-=1;
-		   Instantiate(blood, transform.position, Quaternion.identity);
+		   Instantiate(blood, new Vector3(transform.position.x, transform.position.y, -9), Quaternion.identity);
            Debug.Log("the player has been hit");
 		   iFrames=true;
 		   Debug.Log("invincible");

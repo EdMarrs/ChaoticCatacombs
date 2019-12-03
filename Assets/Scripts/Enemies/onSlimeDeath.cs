@@ -21,7 +21,7 @@ public class onSlimeDeath : MonoBehaviour
 		if(hp <= 0&& triggerDeath==false){
             triggerDeath = true;
             gameObject.GetComponent<EnemySideToSide>().speed = 0;
-            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
 
             Debug.Log("Hit");
        

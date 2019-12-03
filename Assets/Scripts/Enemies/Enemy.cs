@@ -21,9 +21,9 @@ public class Enemy : MonoBehaviour
     }
    
 	public void TakeDamage(int damage){
-		Instantiate(blood, transform.position, Quaternion.identity);
-   //     rb.Addforce(new Vector2("x axis", "y axis"));
-
+		Instantiate(blood, new Vector3(transform.position.x, transform.position.y, -9), Quaternion.identity);
+        //     rb.Addforce(new Vector2("x axis", "y axis"));
+        
 
         health -=damage;
      
