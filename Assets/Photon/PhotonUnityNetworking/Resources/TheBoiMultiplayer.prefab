@@ -20,9 +20,10 @@ GameObject:
   - component: {fileID: 4547152291798139044}
   - component: {fileID: 6139695010692039422}
   - component: {fileID: 5135289549855486891}
-  m_Layer: 0
+  - component: {fileID: 2439906602488732855}
+  m_Layer: 10
   m_Name: TheBoiMultiplayer
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -274,3 +275,18 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
+--- !u!114 &2439906602488732855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7481125700771658491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3669895e170ae534f9a9e20c439e23c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  blood: {fileID: 8037913194882889322, guid: bf91e6175eed0c449a635c3e3fe1dc9c, type: 3}
+  thrust: 10000
