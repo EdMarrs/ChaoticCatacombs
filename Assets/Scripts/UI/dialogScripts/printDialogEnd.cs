@@ -68,6 +68,6 @@ public class printDialogEnd : MonoBehaviour
     public void end()
     {
         //Sends the player back to the main menu
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
 }
