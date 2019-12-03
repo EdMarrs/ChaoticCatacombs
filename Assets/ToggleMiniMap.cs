@@ -1,27 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ToggleMiniMap : MonoBehaviour
 {
     private bool isOn = true;
+    
   
     void Update()
     {
  
         // turns off camera
-        if (Input.GetKeyDown("1") && isOn == true)
-        {  
-            
-            transform.localScale = new Vector3(0, 0, 0);
+        if ((Input.GetKeyDown("1") || Input.GetKeyDown("joystick button 3"))&& isOn == true)
+        {
+
+            this.GetComponent<RawImage>().enabled = false;
             isOn = false;
         }
         
         // turns off camera
-        else if (Input.GetKeyDown("1") && isOn == false)
+        else if ((Input.GetKeyDown("1") || Input.GetKeyDown("joystick button 3")) && isOn == false)
         {
-            
-            transform.localScale = new Vector3(1, 1, 0);
+
+            this.GetComponent<RawImage>().enabled = true;
             isOn = true;
         }
         

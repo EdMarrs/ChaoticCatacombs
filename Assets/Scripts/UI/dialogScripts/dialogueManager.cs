@@ -60,7 +60,8 @@ public class dialogueManager : MonoBehaviour
             if(playerRef.IsTouching(room4))
             {
             	GameObject.Find("roomFourText").GetComponent<Text>().text = tips[3];
-            	StartCoroutine(delay("roomFourText"));
+                GameObject.Find("MiniMapImage").GetComponent<RawImage>().enabled = true;
+                StartCoroutine(delay("roomFourText"));
             }
         }
         if (room6 != null)
