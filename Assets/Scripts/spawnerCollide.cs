@@ -4,23 +4,25 @@ using UnityEngine;
 
 public class spawnerCollide : MonoBehaviour
 {
-	public int numberOfEnemyTypes;              // # of enemy types
+    public int numberOfEnemyTypes;
 
-    public GameObject[] enemies;                // enemy object
-    public int lowerSpawnAmt=1;                 // min spawn amount in an area
-    public int upperSpawnAmt=5;                 // max spawn amount in an area
+    public GameObject[] enemies;
+    public int lowerSpawnAmt = 1;
+    public int upperSpawnAmt = 5;
 
-    private bool alreadyTriggered=false;        // checks if the trigger has been set off
-    private int numberOfEnemiesToSpawn;         // # of enemies to be spawned
-    private int enemyType;                      // sets enemy type
-    private Vector3 spawnPosition;              // sets position of the spawn
-    
-    private float SizeX;                        // size of the enemy on the X-axis
-    private float SizeY;                        // size of the enemy on the Y-axis
+    private bool alreadyTriggered = false;
+    private int numberOfEnemiesToSpawn;
+    private int enemyType;
+    private Vector3 spawnPosition;
 
-    public float spawnWithinLeft=2;             // spawns 2 units in the axis
-    public float spawnWithinRight = 4;          // spawns 4 units in the axis
-   
+    private float SizeX;
+    private float SizeY;
+
+    public float spawnWithinLeft = 2;
+    public float spawnWithinRight = 4;
+
+    // Start is called before the first frame update
+
     void Start()
     {
         numberOfEnemiesToSpawn = Random.Range(lowerSpawnAmt, upperSpawnAmt);
@@ -40,13 +42,9 @@ public class spawnerCollide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*** for the  of enemies, increment ***/
-		for(int i = 0; i < enemies.Length; i++)
-       {
+        for (int i = 0; i < enemies.Length; i++)
+        {
 
-            /** if i is less than the # of enemy types, set active enemy at i to be true
-             * else if, ser active enemy at i to be false
-            **/
             if (i < numberOfEnemyTypes)
             {
                 enemies[i].SetActive(true);
@@ -56,9 +54,10 @@ public class spawnerCollide : MonoBehaviour
                 enemies[i].SetActive(false);
             }
 
-       }
-        
+        }
+
     }
+
     /*
     // on the trigger entered (for 2D objects), passing a collider (for 2D objects)
     private void OnTriggerEnter2D(Collider2D c) {
@@ -71,20 +70,32 @@ public class spawnerCollide : MonoBehaviour
         if (c.GetComponent<Collider2D>().tag == "Player") {
             
             /** if it hasn't been triggered, set to true and spawn enemies 
+=======
+    private void OnTriggerEnter2D(Collider2D c) {
+
+
+        SizeX = gameObject.GetComponent<Collider2D>().bounds.size.x;
+        SizeY = gameObject.GetComponent<Collider2D>().bounds.size.y;
+
+        if (c.GetComponent<Collider2D>().tag == "Player") {
+            
+>>>>>>> 33399adbe225d95032cf9692162e825267c6e7db
             if (!alreadyTriggered)
                 {
                     
                     alreadyTriggered = true;
                     numberOfEnemiesToSpawn = Random.Range(lowerSpawnAmt, upperSpawnAmt);
+<<<<<<< HEAD
                     /*** for the # of enemies to spawn, increment 
+=======
+>>>>>>> 33399adbe225d95032cf9692162e825267c6e7db
                     for(int i = 0; i < numberOfEnemiesToSpawn; i++)
                     {
                         enemyType = Random.Range(0, enemies.Length);
-                        // sets the spawn position to a random range on the X-axis, a position on the Y-axis, and 0 on the Z-axis
                         spawnPosition = new Vector3(Random.Range(transform.position.x+spawnWithinLeft, transform.position.x+spawnWithinRight), transform.position.y, 0 );
       
                     
-                    // instantiates an enemy of enemy type, a spawn position, and a rotation of 0
+
                     Instantiate(enemies[enemyType], spawnPosition, Quaternion.identity);
                         
                     }
@@ -92,5 +103,5 @@ public class spawnerCollide : MonoBehaviour
             
             }
         */
-   // }
+    // }
 }
