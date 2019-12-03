@@ -153,5 +153,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  blood: {fileID: 3279970183438373453, guid: b98ec8158a899a8469fc6302a4c61620, type: 3}
+  blood: {fileID: 3046023463249525703, guid: b98ec8158a899a8469fc6302a4c61620, type: 3}
   thrust: 10000
