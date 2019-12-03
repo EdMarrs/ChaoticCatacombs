@@ -9,15 +9,15 @@ public class ToggleMiniMap : MonoBehaviour
     void Update()
     {
  
-        // turns off camera
+        // gives the effect of the mini map being toggled off
         if (Input.GetKeyDown("1") && isOn == true)
         {  
             
             transform.localScale = new Vector3(0, 0, 0);
             isOn = false;
         }
-        
-        // turns off camera
+
+        // gives the effect of the mini map being toggled on
         else if (Input.GetKeyDown("1") && isOn == false)
         {
             
