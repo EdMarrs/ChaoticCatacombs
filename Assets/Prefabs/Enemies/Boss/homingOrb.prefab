@@ -16,7 +16,8 @@ GameObject:
   - component: {fileID: 5305096013731894732}
   - component: {fileID: -7962449391029169533}
   - component: {fileID: -3729366385266826232}
-  m_Layer: 15
+  - component: {fileID: 8248941083131761485}
+  m_Layer: 10
   m_Name: homingOrb
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -173,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  blood: {fileID: 3279970183438373453, guid: 04938968485166b419147cb6753c46ab, type: 3}
+  blood: {fileID: 8037913194882889322, guid: bf91e6175eed0c449a635c3e3fe1dc9c, type: 3}
   thrust: 10000
 --- !u!114 &-3729366385266826232
 MonoBehaviour:
@@ -187,3 +188,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20719499de1a47648aae977d90d64ff4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chanceToSpawnHealth: 50
+  healthToSpawn: {fileID: 0}
+--- !u!114 &8248941083131761485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7313724726515948888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20719499de1a47648aae977d90d64ff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chanceToSpawnHealth: 50
+  healthToSpawn: {fileID: 6651570129860078823, guid: df18849bde1304a4e9add1da13f5297d,
+    type: 3}

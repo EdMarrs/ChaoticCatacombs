@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  blood: {fileID: 3279970183438373453, guid: 04938968485166b419147cb6753c46ab, type: 3}
+  blood: {fileID: 8037913194882889322, guid: bf91e6175eed0c449a635c3e3fe1dc9c, type: 3}
   thrust: 0
 --- !u!114 &1829052959040211181
 MonoBehaviour:

@@ -5,6 +5,7 @@ using UnityEngine;
 public class onBoiDeath : MonoBehaviour
 {
     private int hp;
+    public int sceneToLoad;
 
 
     void Update()
@@ -14,7 +15,7 @@ public class onBoiDeath : MonoBehaviour
         {
             Debug.Log("Killing Enemy");
             //Animation/Transition Here
-            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(sceneToLoad);
 
         }
     }

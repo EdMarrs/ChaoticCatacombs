@@ -13133,6 +13133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerLocation: {fileID: 1689954786}
+  standing: 0
 --- !u!251 &188954086
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -13486,6 +13488,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1151398920116182388, guid: 0127acf0efc6db546806b69edc671638,
+        type: 3}
+      propertyPath: jumpforce
+      value: 35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0127acf0efc6db546806b69edc671638, type: 3}
 --- !u!1 &388620676
@@ -13534,6 +13541,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerLocation: {fileID: 1689954786}
+  standing: 0
 --- !u!251 &388620679
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -13740,7 +13749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  blood: {fileID: 3279970183438373453, guid: 04938968485166b419147cb6753c46ab, type: 3}
+  blood: {fileID: 8037913194882889322, guid: bf91e6175eed0c449a635c3e3fe1dc9c, type: 3}
   thrust: 0
 --- !u!61 &470059419
 BoxCollider2D:
@@ -19037,6 +19046,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerLocation: {fileID: 1689954786}
+  standing: 0
 --- !u!251 &884587373
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -19489,11 +19500,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: -2087726463568371670, guid: 61f836d9f5a750748863c3e4e04d535e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 4787287726809199740, guid: 61f836d9f5a750748863c3e4e04d535e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19583,6 +19589,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.a
       value: 0.73333335
+      objectReference: {fileID: 0}
+    - target: {fileID: -2087726463568371670, guid: 61f836d9f5a750748863c3e4e04d535e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -7866376308010363266, guid: 61f836d9f5a750748863c3e4e04d535e,
         type: 3}
@@ -22223,6 +22234,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerLocation: {fileID: 1689954786}
+  standing: 0
 --- !u!251 &1259366686
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -22806,6 +22819,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639015343}
   m_CullTransparentMesh: 0
+--- !u!1 &1689954786 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5226546667882513546, guid: 35f3a8cf30554cf41aa3d76a8ecd0f56,
+    type: 3}
+  m_PrefabInstance: {fileID: 5226546668069354161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1764773243
 GameObject:
   m_ObjectHideFlags: 0
@@ -23016,6 +23035,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3860030691877519311, guid: 35f3a8cf30554cf41aa3d76a8ecd0f56,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5226546666765090527, guid: 35f3a8cf30554cf41aa3d76a8ecd0f56,
         type: 3}
       propertyPath: hearts.Array.data[0]
@@ -23041,10 +23065,5 @@ PrefabInstance:
       propertyPath: hearts.Array.data[4]
       value: 
       objectReference: {fileID: 1591877928}
-    - target: {fileID: 3860030691877519311, guid: 35f3a8cf30554cf41aa3d76a8ecd0f56,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35f3a8cf30554cf41aa3d76a8ecd0f56, type: 3}

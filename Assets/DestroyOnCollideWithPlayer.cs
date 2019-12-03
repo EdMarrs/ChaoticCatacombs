@@ -13,8 +13,10 @@ public class DestroyOnCollideWithPlayer : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D c)
     {
+        
         if (c.GetComponent<Collider2D>().tag == "Player")
         {
+            Debug.Log("HIT MEMMEMEMEMEMEMMEME");
             Destroy(gameObject);
         }
     }

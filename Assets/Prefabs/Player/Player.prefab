@@ -203,7 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   player: {fileID: 5226546667882513546}
-  blood: {fileID: 3279970183438373453, guid: 04938968485166b419147cb6753c46ab, type: 3}
+  blood: {fileID: 8037913194882889322, guid: bf91e6175eed0c449a635c3e3fe1dc9c, type: 3}
   GameOver: {fileID: 1772348658534948361, guid: b6b32f46b402c0c4b86e51f6e0ee4b14,
     type: 3}
   numberOfHearts: 3

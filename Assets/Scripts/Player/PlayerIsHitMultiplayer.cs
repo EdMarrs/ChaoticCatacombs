@@ -64,13 +64,9 @@ public class PlayerIsHitMultiplayer : MonoBehaviour
         if (health <= 0)
         {
             //Instantiate(GameOver, new Vector3(Camera.main.gameObject.transform.position.x, Camera.main.gameObject.transform.position.y + 2, -1), Quaternion.identity);
-            PhotonNetwork.Disconnect();
-            PhotonNetwork.LeaveRoom();
-            PhotonNetwork.LeaveLobby();
-
-            health = 3;
-            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
-            //Destroy(player);
+            
+           
+            Destroy(player);
 
 
         }

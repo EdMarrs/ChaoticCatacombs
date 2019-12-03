@@ -125,8 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeb4be5cb243e7846a202b050b0a1442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossOrb: {fileID: 0}
-  homingOrb: {fileID: 0}
+  bossOrb: {fileID: 3373144598869071608, guid: 6a9ef5ed4ac398b42af175510fe64e85, type: 3}
+  homingOrb: {fileID: 7313724726515948888, guid: 9e2360e840b6bb543b04b17b9ca6a2a2,
+    type: 3}
   speed: 10
   homingThresh: 5
 --- !u!114 &-38582758024250076
@@ -142,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20
-  blood: {fileID: 3279970183438373453, guid: 04938968485166b419147cb6753c46ab, type: 3}
+  blood: {fileID: 8037913194882889322, guid: bf91e6175eed0c449a635c3e3fe1dc9c, type: 3}
   thrust: 10000
 --- !u!114 &-5393230740763282712
 MonoBehaviour:
@@ -156,3 +157,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e70eb0ec87e6924b88be5b4f9ee005c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneToLoad: 0
