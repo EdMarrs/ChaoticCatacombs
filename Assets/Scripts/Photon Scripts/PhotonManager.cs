@@ -6,7 +6,6 @@ using Photon.Realtime;
 
 public class PhotonManager : MonoBehaviourPunCallbacks
 {
-    //Test
     // create a lobby camera object we can disable upon connecting to the room
     [SerializeField] private GameObject lobbyCamera;
     public GameObject player;
