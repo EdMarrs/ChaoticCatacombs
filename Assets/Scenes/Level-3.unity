@@ -398,8 +398,8 @@ GameObject:
   - component: {fileID: 12415210}
   - component: {fileID: 12415214}
   - component: {fileID: 12415213}
-  - component: {fileID: 12415212}
   - component: {fileID: 12415211}
+  - component: {fileID: 12415212}
   m_Layer: 8
   m_Name: Platform0_M (3)
   m_TagString: terrain
@@ -873,8 +873,8 @@ GameObject:
   - component: {fileID: 196256208}
   - component: {fileID: 196256212}
   - component: {fileID: 196256211}
-  - component: {fileID: 196256210}
   - component: {fileID: 196256209}
+  - component: {fileID: 196256210}
   m_Layer: 8
   m_Name: Platform0_M (1)
   m_TagString: terrain
@@ -1089,8 +1089,8 @@ GameObject:
   - component: {fileID: 234358211}
   - component: {fileID: 234358215}
   - component: {fileID: 234358214}
-  - component: {fileID: 234358213}
   - component: {fileID: 234358212}
+  - component: {fileID: 234358213}
   m_Layer: 8
   m_Name: Platform0_M (2)
   m_TagString: terrain
@@ -1815,8 +1815,8 @@ GameObject:
   - component: {fileID: 432567282}
   - component: {fileID: 432567286}
   - component: {fileID: 432567285}
-  - component: {fileID: 432567284}
   - component: {fileID: 432567283}
+  - component: {fileID: 432567284}
   m_Layer: 8
   m_Name: Platform0_M (1)
   m_TagString: terrain
@@ -2244,8 +2244,8 @@ GameObject:
   - component: {fileID: 698539315}
   - component: {fileID: 698539319}
   - component: {fileID: 698539318}
-  - component: {fileID: 698539317}
   - component: {fileID: 698539316}
+  - component: {fileID: 698539317}
   m_Layer: 8
   m_Name: Platform0_M (2)
   m_TagString: terrain
@@ -3057,8 +3057,8 @@ GameObject:
   - component: {fileID: 1046912811}
   - component: {fileID: 1046912815}
   - component: {fileID: 1046912814}
-  - component: {fileID: 1046912813}
   - component: {fileID: 1046912812}
+  - component: {fileID: 1046912813}
   m_Layer: 8
   m_Name: Platform0_M
   m_TagString: terrain
@@ -4187,8 +4187,8 @@ GameObject:
   - component: {fileID: 1223660882}
   - component: {fileID: 1223660886}
   - component: {fileID: 1223660885}
-  - component: {fileID: 1223660884}
   - component: {fileID: 1223660883}
+  - component: {fileID: 1223660884}
   m_Layer: 8
   m_Name: Platform0_M (2)
   m_TagString: terrain
@@ -4747,8 +4747,8 @@ GameObject:
   - component: {fileID: 1373039520}
   - component: {fileID: 1373039524}
   - component: {fileID: 1373039523}
-  - component: {fileID: 1373039522}
   - component: {fileID: 1373039521}
+  - component: {fileID: 1373039522}
   m_Layer: 8
   m_Name: Platform0_M (2)
   m_TagString: terrain
@@ -5082,8 +5082,8 @@ GameObject:
   - component: {fileID: 1424106590}
   - component: {fileID: 1424106594}
   - component: {fileID: 1424106593}
-  - component: {fileID: 1424106592}
   - component: {fileID: 1424106591}
+  - component: {fileID: 1424106592}
   m_Layer: 8
   m_Name: Platform0_M (1)
   m_TagString: terrain
@@ -5368,8 +5368,8 @@ GameObject:
   - component: {fileID: 1437967502}
   - component: {fileID: 1437967506}
   - component: {fileID: 1437967505}
-  - component: {fileID: 1437967504}
   - component: {fileID: 1437967503}
+  - component: {fileID: 1437967504}
   m_Layer: 8
   m_Name: Platform0_M (3)
   m_TagString: terrain
@@ -5511,8 +5511,8 @@ GameObject:
   - component: {fileID: 1440518340}
   - component: {fileID: 1440518344}
   - component: {fileID: 1440518343}
-  - component: {fileID: 1440518342}
   - component: {fileID: 1440518341}
+  - component: {fileID: 1440518342}
   m_Layer: 8
   m_Name: Platform0_M (3)
   m_TagString: terrain
@@ -5780,8 +5780,8 @@ GameObject:
   - component: {fileID: 1512205065}
   - component: {fileID: 1512205069}
   - component: {fileID: 1512205068}
-  - component: {fileID: 1512205067}
   - component: {fileID: 1512205066}
+  - component: {fileID: 1512205067}
   m_Layer: 8
   m_Name: Platform0_M (1)
   m_TagString: terrain
@@ -5923,8 +5923,8 @@ GameObject:
   - component: {fileID: 1531110424}
   - component: {fileID: 1531110428}
   - component: {fileID: 1531110427}
-  - component: {fileID: 1531110426}
   - component: {fileID: 1531110425}
+  - component: {fileID: 1531110426}
   m_Layer: 8
   m_Name: Platform0_M (2)
   m_TagString: terrain
@@ -6432,8 +6432,8 @@ GameObject:
   - component: {fileID: 1723418827}
   - component: {fileID: 1723418831}
   - component: {fileID: 1723418830}
-  - component: {fileID: 1723418829}
   - component: {fileID: 1723418828}
+  - component: {fileID: 1723418829}
   m_Layer: 8
   m_Name: Platform0_M (1)
   m_TagString: terrain
@@ -7020,8 +7020,8 @@ GameObject:
   - component: {fileID: 1851963457}
   - component: {fileID: 1851963461}
   - component: {fileID: 1851963460}
-  - component: {fileID: 1851963459}
   - component: {fileID: 1851963458}
+  - component: {fileID: 1851963459}
   m_Layer: 8
   m_Name: Platform0_M
   m_TagString: terrain
@@ -7210,8 +7210,8 @@ GameObject:
   - component: {fileID: 1867291474}
   - component: {fileID: 1867291478}
   - component: {fileID: 1867291477}
-  - component: {fileID: 1867291476}
   - component: {fileID: 1867291475}
+  - component: {fileID: 1867291476}
   m_Layer: 8
   m_Name: Platform0_M (2)
   m_TagString: terrain
@@ -7353,7 +7353,6 @@ GameObject:
   - component: {fileID: 1867821445}
   - component: {fileID: 1867821449}
   - component: {fileID: 1867821448}
-  - component: {fileID: 1867821447}
   - component: {fileID: 1867821446}
   m_Layer: 8
   m_Name: Platform0_M
@@ -7376,21 +7375,7 @@ Transform:
   m_Father: {fileID: 699386477}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1867821446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1867821444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLocation: {fileID: 1626071041}
-  standing: 0
---- !u!251 &1867821447
+--- !u!251 &1867821446
 PlatformEffector2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7586,8 +7571,8 @@ GameObject:
   - component: {fileID: 1997136401}
   - component: {fileID: 1997136405}
   - component: {fileID: 1997136404}
-  - component: {fileID: 1997136403}
   - component: {fileID: 1997136402}
+  - component: {fileID: 1997136403}
   m_Layer: 8
   m_Name: Platform0_M (1)
   m_TagString: terrain
@@ -7872,8 +7857,8 @@ GameObject:
   - component: {fileID: 2021084127}
   - component: {fileID: 2021084131}
   - component: {fileID: 2021084130}
-  - component: {fileID: 2021084129}
   - component: {fileID: 2021084128}
+  - component: {fileID: 2021084129}
   m_Layer: 8
   m_Name: Platform0_M
   m_TagString: terrain
@@ -8227,8 +8212,8 @@ GameObject:
   - component: {fileID: 2095636500}
   - component: {fileID: 2095636504}
   - component: {fileID: 2095636503}
-  - component: {fileID: 2095636502}
   - component: {fileID: 2095636501}
+  - component: {fileID: 2095636502}
   m_Layer: 8
   m_Name: Platform0_M
   m_TagString: terrain
@@ -8370,8 +8355,8 @@ GameObject:
   - component: {fileID: 2110688481}
   - component: {fileID: 2110688485}
   - component: {fileID: 2110688484}
-  - component: {fileID: 2110688483}
   - component: {fileID: 2110688482}
+  - component: {fileID: 2110688483}
   m_Layer: 8
   m_Name: Platform0_M
   m_TagString: terrain

@@ -18,7 +18,7 @@ public class pressKeyToRestart : MonoBehaviour
             GlobalControl.Instance.specialBarCurr = 100;
             GlobalControl.Instance.specialBarMax = 100;
 
-            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
         }
     }
 }

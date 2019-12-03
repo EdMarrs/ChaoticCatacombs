@@ -1772,7 +1772,6 @@ GameObject:
   - component: {fileID: 326287403}
   - component: {fileID: 326287402}
   - component: {fileID: 326287401}
-  - component: {fileID: 326287400}
   m_Layer: 8
   m_Name: Platform0_M (3)
   m_TagString: terrain
@@ -1794,20 +1793,6 @@ Transform:
   m_Father: {fileID: 639622306}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &326287400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326287398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLocation: {fileID: 0}
-  standing: 0
 --- !u!251 &326287401
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -1915,7 +1900,6 @@ GameObject:
   - component: {fileID: 331227441}
   - component: {fileID: 331227440}
   - component: {fileID: 331227439}
-  - component: {fileID: 331227438}
   m_Layer: 8
   m_Name: Platform0_M (1)
   m_TagString: terrain
@@ -1937,20 +1921,6 @@ Transform:
   m_Father: {fileID: 658683152}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &331227438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 331227436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLocation: {fileID: 0}
-  standing: 0
 --- !u!251 &331227439
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -2058,7 +2028,6 @@ GameObject:
   - component: {fileID: 414923771}
   - component: {fileID: 414923770}
   - component: {fileID: 414923769}
-  - component: {fileID: 414923768}
   m_Layer: 8
   m_Name: Platform0_M (1)
   m_TagString: terrain
@@ -2080,20 +2049,6 @@ Transform:
   m_Father: {fileID: 976738050}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &414923768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414923766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLocation: {fileID: 0}
-  standing: 0
 --- !u!251 &414923769
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -2201,7 +2156,6 @@ GameObject:
   - component: {fileID: 427316509}
   - component: {fileID: 427316508}
   - component: {fileID: 427316507}
-  - component: {fileID: 427316506}
   m_Layer: 8
   m_Name: Platform0_M (1)
   m_TagString: terrain
@@ -2223,20 +2177,6 @@ Transform:
   m_Father: {fileID: 639622306}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &427316506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 427316504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLocation: {fileID: 0}
-  standing: 0
 --- !u!251 &427316507
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -2704,7 +2644,6 @@ GameObject:
   - component: {fileID: 436327025}
   - component: {fileID: 436327024}
   - component: {fileID: 436327023}
-  - component: {fileID: 436327022}
   m_Layer: 8
   m_Name: Platform0_M (2)
   m_TagString: terrain
@@ -2726,20 +2665,6 @@ Transform:
   m_Father: {fileID: 132918209}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &436327022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 436327020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLocation: {fileID: 0}
-  standing: 0
 --- !u!251 &436327023
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -3432,7 +3357,6 @@ GameObject:
   - component: {fileID: 618612086}
   - component: {fileID: 618612085}
   - component: {fileID: 618612084}
-  - component: {fileID: 618612083}
   m_Layer: 8
   m_Name: Platform0_M (2)
   m_TagString: terrain
@@ -3454,20 +3378,6 @@ Transform:
   m_Father: {fileID: 1636173496}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &618612083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 618612081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLocation: {fileID: 0}
-  standing: 0
 --- !u!251 &618612084
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -3622,7 +3532,6 @@ GameObject:
   - component: {fileID: 633565317}
   - component: {fileID: 633565316}
   - component: {fileID: 633565315}
-  - component: {fileID: 633565314}
   m_Layer: 8
   m_Name: Platform0_M (1)
   m_TagString: terrain
@@ -3644,20 +3553,6 @@ Transform:
   m_Father: {fileID: 1636173496}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &633565314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 633565312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLocation: {fileID: 0}
-  standing: 0
 --- !u!251 &633565315
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -4202,7 +4097,6 @@ GameObject:
   - component: {fileID: 680670450}
   - component: {fileID: 680670449}
   - component: {fileID: 680670448}
-  - component: {fileID: 680670447}
   m_Layer: 8
   m_Name: Platform0_M (3)
   m_TagString: terrain
@@ -4224,20 +4118,6 @@ Transform:
   m_Father: {fileID: 658683152}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &680670447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 680670445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLocation: {fileID: 0}
-  standing: 0
 --- !u!251 &680670448
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -4345,7 +4225,6 @@ GameObject:
   - component: {fileID: 684744599}
   - component: {fileID: 684744598}
   - component: {fileID: 684744597}
-  - component: {fileID: 684744596}
   m_Layer: 8
   m_Name: Platform0_M (2)
   m_TagString: terrain
@@ -4367,20 +4246,6 @@ Transform:
   m_Father: {fileID: 976738050}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &684744596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 684744594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLocation: {fileID: 0}
-  standing: 0
 --- !u!251 &684744597
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -5253,7 +5118,6 @@ GameObject:
   - component: {fileID: 866613065}
   - component: {fileID: 866613064}
   - component: {fileID: 866613063}
-  - component: {fileID: 866613062}
   m_Layer: 8
   m_Name: Platform0_M
   m_TagString: terrain
@@ -5275,20 +5139,6 @@ Transform:
   m_Father: {fileID: 1437017747}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &866613062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866613060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLocation: {fileID: 0}
-  standing: 0
 --- !u!251 &866613063
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -5969,7 +5819,6 @@ GameObject:
   - component: {fileID: 990133932}
   - component: {fileID: 990133931}
   - component: {fileID: 990133930}
-  - component: {fileID: 990133929}
   m_Layer: 8
   m_Name: Platform0_M (2)
   m_TagString: terrain
@@ -5991,20 +5840,6 @@ Transform:
   m_Father: {fileID: 639622306}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &990133929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 990133927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLocation: {fileID: 0}
-  standing: 0
 --- !u!251 &990133930
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -6502,7 +6337,6 @@ GameObject:
   - component: {fileID: 1174698389}
   - component: {fileID: 1174698388}
   - component: {fileID: 1174698387}
-  - component: {fileID: 1174698386}
   m_Layer: 8
   m_Name: Platform0_M
   m_TagString: terrain
@@ -6524,20 +6358,6 @@ Transform:
   m_Father: {fileID: 976738050}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1174698386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1174698384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLocation: {fileID: 0}
-  standing: 0
 --- !u!251 &1174698387
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -7310,7 +7130,6 @@ GameObject:
   - component: {fileID: 1346586373}
   - component: {fileID: 1346586372}
   - component: {fileID: 1346586371}
-  - component: {fileID: 1346586370}
   m_Layer: 8
   m_Name: Platform0_M
   m_TagString: terrain
@@ -7332,20 +7151,6 @@ Transform:
   m_Father: {fileID: 639622306}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1346586370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346586368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLocation: {fileID: 0}
-  standing: 0
 --- !u!251 &1346586371
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -7645,7 +7450,6 @@ GameObject:
   - component: {fileID: 1470425073}
   - component: {fileID: 1470425072}
   - component: {fileID: 1470425071}
-  - component: {fileID: 1470425070}
   m_Layer: 8
   m_Name: Platform0_M (1)
   m_TagString: terrain
@@ -7667,20 +7471,6 @@ Transform:
   m_Father: {fileID: 1437017747}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1470425070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470425068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLocation: {fileID: 0}
-  standing: 0
 --- !u!251 &1470425071
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -7788,7 +7578,6 @@ GameObject:
   - component: {fileID: 1597701917}
   - component: {fileID: 1597701916}
   - component: {fileID: 1597701915}
-  - component: {fileID: 1597701914}
   m_Layer: 8
   m_Name: Platform0_M (2)
   m_TagString: terrain
@@ -7810,20 +7599,6 @@ Transform:
   m_Father: {fileID: 658683152}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1597701914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1597701912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLocation: {fileID: 0}
-  standing: 0
 --- !u!251 &1597701915
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -7931,7 +7706,6 @@ GameObject:
   - component: {fileID: 1619427124}
   - component: {fileID: 1619427123}
   - component: {fileID: 1619427122}
-  - component: {fileID: 1619427121}
   m_Layer: 8
   m_Name: Platform0_M
   m_TagString: terrain
@@ -7953,20 +7727,6 @@ Transform:
   m_Father: {fileID: 658683152}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1619427121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1619427119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLocation: {fileID: 0}
-  standing: 0
 --- !u!251 &1619427122
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -8389,7 +8149,6 @@ GameObject:
   - component: {fileID: 1696800046}
   - component: {fileID: 1696800045}
   - component: {fileID: 1696800044}
-  - component: {fileID: 1696800043}
   m_Layer: 8
   m_Name: Platform0_M (3)
   m_TagString: terrain
@@ -8411,20 +8170,6 @@ Transform:
   m_Father: {fileID: 976738050}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1696800043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1696800041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLocation: {fileID: 0}
-  standing: 0
 --- !u!251 &1696800044
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -8532,7 +8277,6 @@ GameObject:
   - component: {fileID: 1698504445}
   - component: {fileID: 1698504444}
   - component: {fileID: 1698504443}
-  - component: {fileID: 1698504442}
   m_Layer: 8
   m_Name: Platform0_M (2)
   m_TagString: terrain
@@ -8554,20 +8298,6 @@ Transform:
   m_Father: {fileID: 1437017747}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1698504442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1698504440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLocation: {fileID: 0}
-  standing: 0
 --- !u!251 &1698504443
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -8675,7 +8405,6 @@ GameObject:
   - component: {fileID: 1715318726}
   - component: {fileID: 1715318725}
   - component: {fileID: 1715318724}
-  - component: {fileID: 1715318723}
   m_Layer: 8
   m_Name: Platform0_M
   m_TagString: terrain
@@ -8697,20 +8426,6 @@ Transform:
   m_Father: {fileID: 1636173496}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1715318723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715318721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLocation: {fileID: 0}
-  standing: 0
 --- !u!251 &1715318724
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -9348,7 +9063,6 @@ GameObject:
   - component: {fileID: 1962380304}
   - component: {fileID: 1962380303}
   - component: {fileID: 1962380302}
-  - component: {fileID: 1962380301}
   m_Layer: 8
   m_Name: Platform0_M (1)
   m_TagString: terrain
@@ -9370,20 +9084,6 @@ Transform:
   m_Father: {fileID: 132918209}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1962380301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1962380299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLocation: {fileID: 0}
-  standing: 0
 --- !u!251 &1962380302
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -10062,7 +9762,6 @@ GameObject:
   - component: {fileID: 2023885016}
   - component: {fileID: 2023885015}
   - component: {fileID: 2023885014}
-  - component: {fileID: 2023885013}
   m_Layer: 8
   m_Name: Platform0_M
   m_TagString: terrain
@@ -10084,20 +9783,6 @@ Transform:
   m_Father: {fileID: 132918209}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2023885013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023885011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLocation: {fileID: 0}
-  standing: 0
 --- !u!251 &2023885014
 PlatformEffector2D:
   m_ObjectHideFlags: 0

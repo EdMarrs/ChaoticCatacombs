@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 6139695010692039422}
   - component: {fileID: 5135289549855486891}
   - component: {fileID: 2439906602488732855}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: TheBoiMultiplayer
-  m_TagString: enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
