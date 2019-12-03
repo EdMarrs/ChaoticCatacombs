@@ -7,17 +7,23 @@ public class onSlimeDeath : MonoBehaviour
 	private int hp;
 	public GameObject miniSlime;
     private Animator anim;
+    public bool triggerDeath;
     
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        triggerDeath = false;
        
     }
 	void Update(){
 		hp = gameObject.GetComponent<Enemy>().health;
-		if(hp <= 0){
-			Debug.Log("Hit");
+		if(hp <= 0&& triggerDeath==false){
+            triggerDeath = true;
+            gameObject.GetComponent<EnemySideToSide>().speed = 0;
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+
+            Debug.Log("Hit");
        
             anim.SetBool("isDead", true);
             //Instantiate(miniSlime, transform.position + new Vector3(0, 0, 0), Quaternion.identity);

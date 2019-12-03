@@ -499,6 +499,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerLocation: {fileID: 0}
+  standing: 0
 --- !u!251 &123745159
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -1541,6 +1543,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerLocation: {fileID: 0}
+  standing: 0
 --- !u!251 &330231124
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -1756,6 +1760,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerLocation: {fileID: 0}
+  standing: 0
 --- !u!251 &445820415
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -2677,6 +2683,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerLocation: {fileID: 0}
+  standing: 0
 --- !u!251 &809118547
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -2868,6 +2876,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerLocation: {fileID: 0}
+  standing: 0
 --- !u!251 &826220916
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -5159,6 +5169,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5226546667882513652, guid: 35f3a8cf30554cf41aa3d76a8ecd0f56,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35f3a8cf30554cf41aa3d76a8ecd0f56, type: 3}
 --- !u!1 &1511342773
@@ -5215,7 +5230,7 @@ Camera:
   field of view: 53.484116
   orthographic: 0
   orthographic size: 5
-  m_Depth: 0
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 131072
@@ -5660,6 +5675,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerLocation: {fileID: 0}
+  standing: 0
 --- !u!251 &1711462673
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -6639,6 +6656,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3cd590254a0d446a15132cc6f72f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerLocation: {fileID: 0}
+  standing: 0
 --- !u!251 &2058623051
 PlatformEffector2D:
   m_ObjectHideFlags: 0

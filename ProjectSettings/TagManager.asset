@@ -35,7 +35,7 @@ TagManager:
   - BossHead
   - Spikes
   - MiniMap
-  - 
+  - NonCollidable
   - 
   - 
   - 
