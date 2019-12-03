@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
      public AudioClip jumpSound;
      AudioSource audioSource;
     internal static int moveInput;
-
+    //
     void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();

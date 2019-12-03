@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerState : MonoBehaviour
-{
-   
-        void Start()
+{//
+
+    void Start()
         {
             GameObject.Find("playerCollider").GetComponent<PlayerIsHit>().health = GlobalControl.Instance.hp;
             GameObject.Find("playerCollider").GetComponent<PlayerIsHit>().numberOfHearts = GlobalControl.Instance.maxhp;

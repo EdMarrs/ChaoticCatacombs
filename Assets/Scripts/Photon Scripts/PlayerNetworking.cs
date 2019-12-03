@@ -1,7 +1,7 @@
 ﻿/*This script serves to handle conflicts arising from the issue of both players using one player controller
  * we place our player scripts to be ignored into the array by adding them within the Player Networking component in Unity (drag and drop)
  * 
- */
+ *///
 
 using System.Collections;
 using System.Collections.Generic;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class getItem : MonoBehaviour
-{
+{//
     public AudioClip ItemSound;
     AudioSource audioSource;
 
