@@ -10,6 +10,25 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     [SerializeField] private GameObject lobbyCamera;
     public GameObject player;
     // Start is called before the first frame update
+    void Start()
+    {
+        // connects us to the server
+        PhotonNetwork.ConnectUsingSettings();
+        
+    }
+
+    public override void OnConnectedToMaster()
+    {
+        PhotonNetwork.JoinLobby();
+        
+    }
+
+    public override void OnJoinedLobby()
+    {
+        // If there is a room available lets join it, if not lets create one
+        // sets MaxPlayers to 2 when creating a room
+        PhotonNetwork.JoinOrCreateRoom("Room", new RoomOptions { MaxPlayers = 2 }, TypedLobby.Default);
+    }
 
     public override void OnJoinedRoom()
     {
@@ -27,9 +46,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         
 
         GameObject.Find("Player(MultiplayerVersion)(Clone)").name = "Player";
-        
         Destroy(GameObject.Find("Player Camera"));
-        
 
         lobbyCamera.SetActive(false);
 

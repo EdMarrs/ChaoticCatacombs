@@ -3,6 +3,8 @@
  * 
  */
 
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
@@ -12,6 +14,7 @@ public class PlayerNetworking : MonoBehaviour
     public MonoBehaviour[] scriptsToIgnore;
 
     private PhotonView photonView;
+    [SerializeField] private GameObject playerCamera;
 
     // Start is called before the first frame update
     void Start()
@@ -24,12 +27,14 @@ public class PlayerNetworking : MonoBehaviour
             foreach (var script in scriptsToIgnore)
             {
                 script.enabled = false;
+                playerCamera.SetActive(false);
             }
         }
-                
+
         else
         {
-            // stuff we want to do if the photonView belongs only to us
+            // enable the player camera if the view is ours
+            playerCamera.SetActive(true);
         }
 
     }
