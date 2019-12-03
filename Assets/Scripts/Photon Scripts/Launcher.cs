@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Launcher : MonoBehaviourPunCallbacks
 {
-    //Test
+
     [Tooltip("The Ui Panel to let the user enter name, connect, and play")]
     [SerializeField]
     private GameObject controlPanel;

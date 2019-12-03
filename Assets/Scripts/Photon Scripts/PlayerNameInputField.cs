@@ -12,7 +12,6 @@ public class PlayerNameInputField : MonoBehaviour
     const string playerNamePrefKey = "PlayerName";
 
     // Start is called before the first frame update
-    //Test
     void Start()
     {
 
